@@ -1,0 +1,29 @@
+%icon-button-base {
+  @include inline-flexbox;
+
+  border-radius: 0.6rem;
+}
+
+.btn-36 {
+  @extend %icon-button-base;
+
+  height: 3.2rem;
+  padding: 0 0.4rem;
+}
+
+.icon-btn-outline {
+  border: 0.1rem solid $gray50;
+  transition: $base-transition;
+
+  &:hover {
+    border-color: $gray30;
+  }
+}
+
+.icon-btn {
+  transition: $base-transition;
+
+  &:hover {
+    background-color: $opacity-white-5;
+  }
+}
