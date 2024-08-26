@@ -73,14 +73,14 @@
           </h1>
 
           <nav class="board-header-nav">
-            <a class="btn-40 btn-outline" href="#void" aria-label="go to Home">
+            <a class="btn-36 icon-btn-outline" href="#void" aria-label="go to Home">
               <img src="./assets/svg/ic-home.svg" alt="Home" />
             </a>
-            <button class="alarm-button btn-40 btn-outline" type="button" aria-label="Notifications">
+            <button class="alarm-button btn-36 icon-btn-outline" type="button" aria-label="Notifications">
               <img src="./assets/svg/ic-email.svg" alt="Invitation icon" />
             </button>
             <button class="profile" type="button" aria-label="Profile">
-              <div class="profile-image avatar-40">
+              <div class="profile-image avatar-36">
                 <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
               </div>
               <div class="profile-info sm-hidden">
@@ -95,25 +95,36 @@
           <header class="board-content-header">
             <div class="header-title">
               <h2>React Study</h2>
-              <button type="button" aria-label="Settings">
+              <a class="btn-36 icon-btn" href="#viod" aria-label="Settings">
                 <img src="./assets/svg/ic-settings.svg" alt="Setting" />
-              </button>
+              </a>
             </div>
 
             <div class="header-controls">
               <div class="invite-members">
-                <ul>
-                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
-                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
-                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
-                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
-                  <li>+2</li>
-                </ul>
+                <div class="member-group">
+                  <ul class="member-list">
+                    <li class="member-item avatar-24">
+                      <img src="./assets/images/profile-avatar.jpg" alt="member" />
+                    </li>
+                    <li class="member-item avatar-24">
+                      <img src="./assets/images/profile-avatar.jpg" alt="member" />
+                    </li>
+                    <li class="member-item avatar-24">
+                      <img src="./assets/images/profile-avatar.jpg" alt="member" />
+                    </li>
+                    <li class="member-item avatar-24">
+                      <img src="./assets/images/profile-avatar.jpg" alt="member" />
+                    </li>
+                  </ul>
+                  <div class="additional-members">+2</div>
+                </div>
                 <button type="button" aria-label="Invite member">
                   <img src="./assets/svg/ic-add.svg" alt="add icon" />
                   Invite
                 </button>
               </div>
+
               <nav class="breadcrumb sm-hidden">
                 <a href="#void">
                   <img src="./assets/svg/ic-dashboard-default.svg" alt="Dashboard icon" />
