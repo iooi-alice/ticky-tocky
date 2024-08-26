@@ -47,13 +47,13 @@
   }
 
   &-menu-list {
-    @include column-flexbox(start, $gap: 1rem);
-    @include no-scrollbar;
-
     overflow-y: scroll;
     flex-grow: 1;
     height: calc(100vh - 19.2rem);
     margin-top: 1.6rem;
+
+    @include column-flexbox(start, $gap: 1rem);
+    @include no-scrollbar;
   }
 
   &-menu-item {
