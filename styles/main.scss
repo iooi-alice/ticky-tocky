@@ -1,0 +1,20 @@
+@import './variables/box-shadows';
+@import './variables/breakpoints';
+@import './variables/colors';
+@import './variables/motions';
+@import './variables/typography';
+@import './variables/z-indexes';
+
+@import './base/globals';
+@import './base/normalize';
+@import './base/reset';
+
+@import './mixins/flexbox';
+@import './mixins/image';
+@import './mixins/position';
+@import './mixins/responsive';
+@import './mixins/scrollbar';
+@import './mixins/text-style';
+
+@import './layouts/gnb';
+@import './layouts/header';
