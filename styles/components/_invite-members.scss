@@ -1,0 +1,65 @@
+.invite-members {
+  @include flexbox($gap: 1.2rem);
+
+  position: relative;
+
+  padding: 0.4rem 1.2rem 0.4rem 0.6rem;
+
+  border: 0.1rem solid $gray70;
+  border-radius: 999rem;
+
+  transition: $base-transition;
+
+  &::after {
+    @include pos-center-y;
+
+    content: '';
+
+    right: -1.8rem;
+
+    display: block;
+
+    height: 2.4rem;
+
+    border: 0.01rem solid $gray60;
+  }
+
+  &:hover {
+    border-color: $gray30;
+  }
+
+  .member-group,
+  .member-list {
+    @include flexbox($gap: 0.4rem);
+  }
+
+  .additional-members {
+    @include inline-flexbox;
+
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: $gray70;
+    border-radius: 50%;
+  }
+
+  button {
+    @include flexbox($gap: 0.2rem);
+    @include text-style(14, $gray10);
+
+    position: relative;
+
+    &::after {
+      @include pos-center-y;
+
+      content: '';
+
+      left: -0.6rem;
+
+      display: block;
+
+      height: 100%;
+
+      border: 0.01rem solid $gray60;
+    }
+  }
+}
