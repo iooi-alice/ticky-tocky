@@ -1,0 +1,11 @@
+%avatar-base {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar-40 {
+  @extend %avatar-base;
+
+  width: 4rem;
+  height: 4rem;
+}
