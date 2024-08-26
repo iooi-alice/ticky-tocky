@@ -2,27 +2,23 @@
   &-header {
     @include flexbox(between);
 
-    height: 60px;
+    height: 6rem;
     padding: 0 3.2rem;
-    border-bottom: 1px solid $gray70;
+    border-bottom: 0.1rem solid $gray70;
 
     .logo {
-      height: 20px;
+      height: 2rem;
     }
 
     &-nav {
-      @include flexbox($gap: 1.2rem);
+      @include flexbox($gap: 0.8rem);
 
       .profile {
         @include flexbox($gap: 0.8rem);
 
         &-image {
-          border: 2px solid transparent;
+          border: 0.2rem solid transparent;
           transition: $base-transition;
-
-          img {
-            @include image-fit;
-          }
         }
 
         &-info {
@@ -39,7 +35,7 @@
 
         &.is-active {
           .profile-image {
-            border: 2px solid $primary;
+            border: 0.2rem solid $primary;
           }
         }
       }
