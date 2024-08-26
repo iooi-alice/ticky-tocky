@@ -1,0 +1,7 @@
+.container {
+  @include flexbox(start, start);
+}
+
+.content {
+  flex-grow: 1;
+}
