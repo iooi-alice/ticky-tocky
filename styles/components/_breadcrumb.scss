@@ -1,0 +1,12 @@
+.breadcrumb {
+  @include flexbox($gap: 0.4rem);
+  @include text-style(14, $gray30);
+
+  a:first-child {
+    @include flexbox($gap: 0.2rem);
+  }
+
+  a:last-child {
+    color: $gray10;
+  }
+}
