@@ -1,11 +1,29 @@
 %avatar-base {
   overflow: hidden;
   border-radius: 50%;
+
+  img {
+    @include image-fit;
+  }
 }
 
-.avatar-40 {
+.avatar-56 {
   @extend %avatar-base;
 
-  width: 4rem;
-  height: 4rem;
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+.avatar-36 {
+  @extend %avatar-base;
+
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.avatar-24 {
+  @extend %avatar-base;
+
+  width: 2.4rem;
+  height: 2.4rem;
 }
