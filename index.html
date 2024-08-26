@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TickyTocky</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="gnb">
+        <h1 class="visually-hidden">Navigation</h1>
+        <div class="gnb-add">
+          <button type="button" aria-label="Add new task">
+            <img src="./assets/svg/ic-add-active.svg" alt="Add icon" />
+          </button>
+        </div>
+        <ul class="gnb-menu-list">
+          <li class="gnb-menu-item">
+            <a href="#viod" aria-label="Home">
+              <img src="./assets/svg/ic-dashboard-default.svg" alt="Home icon" />
+            </a>
+          </li>
+          <li class="gnb-menu-item">
+            <a href="#viod" aria-label="Task item">
+              <img src="./assets/images/menu-thumbnail-next.jpg" alt="Next.js" />
+            </a>
+          </li>
+          <li class="gnb-menu-item is-active">
+            <a href="#viod" aria-label="Task item">
+              <img src="./assets/images/menu-thumbnail-react.jpg" alt="React.js" />
+            </a>
+          </li>
+          <li class="gnb-menu-item">
+            <a href="#viod" aria-label="Task item">
+              <img src="./assets/images/menu-thumbnail-reactquery.jpg" alt="React-quert" />
+            </a>
+          </li>
+          <li class="gnb-menu-item">
+            <a href="#viod" aria-label="Task item">
+              <img src="./assets/images/menu-thumbnail-ts.jpg" alt="Typescript" />
+            </a>
+          </li>
+          <li class="gnb-menu-item">
+            <a href="#viod" aria-label="Task item">
+              <img src="./assets/images/menu-thumbnail-tailwind.jpg" alt="Tailwind" />
+            </a>
+          </li>
+          <li class="gnb-menu-item">
+            <a href="#viod" aria-label="Task item">
+              <img src="./assets/images/menu-thumbnail-storybook.jpg" alt="Storybook" />
+            </a>
+          </li>
+          <li class="gnb-menu-item">
+            <a>
+              <img src="./assets/images/menu-thumbnail-figma.jpg" alt="Figma" />
+            </a>
+          </li>
+        </ul>
+        <div class="gnb-logout">
+          <button type="button" aria-label="logout">
+            <img src="./assets/svg/ic-logout.svg" alt="logout icon" />
+          </button>
+        </div>
+      </nav>
+
+      <div class="board">
+        <header class="board-header">
+          <h1 class="logo">
+            <a href="/">
+              <img src="./assets/svg/ic-logo.svg" alt="TickyTocky logo" />
+            </a>
+          </h1>
+
+          <nav class="global-header-nav">
+            <a href="#void" aria-label="go to Home">Home</a>
+            <button class="alarm-button" type="button" aria-label="Notifications">
+              <img src="./assets/svg/ic-email.svg" alt="Invitation icon" />
+            </button>
+            <button class="profile" type="button" aria-label="Profile">
+              <div class="avatar-40">
+                <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
+              </div>
+              <div class="sm-hidden">
+                <span class="username">Alice</span>
+                <img src="./assets/svg/ic-profile-arrow-down.svg" alt="Arrow down icon" />
+              </div>
+            </button>
+          </nav>
+        </header>
+
+        <main class="board-content">
+          <header class="board-content-header">
+            <div class="header-title">
+              <h2>React Study</h2>
+              <button type="button" aria-label="Settings">
+                <img src="./assets/svg/ic-settings.svg" alt="Setting" />
+              </button>
+            </div>
+
+            <div class="header-controls">
+              <div class="invite-members">
+                <ul>
+                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
+                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
+                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
+                  <li><img src="./assets/images/profile-avatar.jpg" alt="member" /></li>
+                  <li>+2</li>
+                </ul>
+                <button type="button" aria-label="Invite member">
+                  <img src="./assets/svg/ic-add.svg" alt="add icon" />
+                  Invite
+                </button>
+              </div>
+              <nav class="breadcrumb sm-hidden">
+                <a href="#void">
+                  <img src="./assets/svg/ic-dashboard-default.svg" alt="Dashboard icon" />
+                  Dashboards
+                </a>
+                <img src="./assets/svg/ic-arrow-right.svg" alt="Arrow right" />
+                <a href="#void">React Study</a>
+              </nav>
+            </div>
+          </header>
+
+          <section class="task-wrapper">
+            <ol class="task-list">
+              <li class="task-item">
+                <ol class="card-list">
+                  <li class="card-item">
+                    <article class="card">
+                      <div class="card-thumbnail">
+                        <img src="" alt="Card thumbnail" />
+                      </div>
+                      <div class="card-content">
+                        <h2 class="card-title">Stylelint</h2>
+                        <ol class="tag-list">
+                          <li class="tag-item">
+                            <div class="tag">tag 1</div>
+                          </li>
+                          <li class="tag-item">
+                            <div class="tag">tag 2</div>
+                          </li>
+                          <li class="tag-item">
+                            <div class="tag">tag 3</div>
+                          </li>
+                        </ol>
+                        <div>
+                          <div class="date">
+                            <img src="./assets/svg/ic-calendar-default.svg" alt="Calendar icon" />
+                          </div>
+                          <div class="author">
+                            <img src="./assets/images/profile-avatar.jpg" alt="Author profile image" />
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <button type="button" aria-label="Add schedule">
+              <img src="./assets/svg/ic-add-active.svg" alt="add icon" />
+              Add Task
+            </button>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="./js/gnb.js"></script>
+  </body>
+</html>
