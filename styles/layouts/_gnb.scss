@@ -1,6 +1,8 @@
 %gnb-button-base {
   @include inline-flexbox;
 
+  overflow: hidden;
+
   width: 4.8rem;
   height: 4.8rem;
 
@@ -10,37 +12,108 @@
   transition: $base-transition;
 
   &:hover {
-    background-color: $primary;
     border-radius: 0.6rem;
   }
 }
 
 .gnb {
-  @include column-flexbox(start);
+  @include column-flexbox(between);
 
   width: 7.2rem;
-  min-height: 100vh;
+  height: 100vh;
+  padding: 2.4rem 0;
   background-color: $black;
 
-  .add-button {
-    @extend %gnb-button-base;
+  &-add {
+    position: relative;
+    padding-bottom: 1.6rem;
 
-    margin: 7.2rem 0 0.8rem;
-  }
-
-  &-list {
-    @include column-flexbox($gap: 1.6rem);
-
-    padding: 3.2rem 0 7.2rem;
-  }
-
-  &-item {
     button {
       @extend %gnb-button-base;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+
+        display: block;
+
+        width: 100%;
+
+        border: 1px solid $gray70;
+      }
     }
   }
 
-  .logout-button {
-    @extend %gnb-button-base;
+  &-menu-list {
+    @include column-flexbox(start, $gap: 1rem);
+    @include no-scrollbar;
+
+    overflow-y: scroll;
+    flex-grow: 1;
+    height: calc(100vh - 19.2rem);
+    margin-top: 1.6rem;
+  }
+
+  &-menu-item {
+    a {
+      @extend %gnb-button-base;
+
+      position: relative;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 1;
+        background-color: $opacity-black-60;
+
+        transition: $base-transition;
+      }
+
+      img {
+        @include image-fit;
+
+        display: block;
+      }
+    }
+
+    &:first-child {
+      a {
+        &::after {
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+
+    &.is-active {
+      a {
+        border-radius: 0.6rem;
+
+        &::after {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &-logout {
+    padding-top: 1.6rem;
+
+    button {
+      @extend %gnb-button-base;
+    }
   }
 }
