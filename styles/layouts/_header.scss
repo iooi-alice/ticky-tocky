@@ -1,0 +1,48 @@
+.board {
+  &-header {
+    @include flexbox(between);
+
+    height: 60px;
+    padding: 0 3.2rem;
+    border-bottom: 1px solid $gray70;
+
+    .logo {
+      height: 20px;
+    }
+
+    &-nav {
+      @include flexbox($gap: 1.2rem);
+
+      .profile {
+        @include flexbox($gap: 0.8rem);
+
+        &-image {
+          border: 2px solid transparent;
+          transition: $base-transition;
+
+          img {
+            @include image-fit;
+          }
+        }
+
+        &-info {
+          @include flexbox($gap: 0.2rem);
+
+          .username {
+            @include text-style(16, $gray10);
+          }
+
+          img {
+            transition: $base-transition;
+          }
+        }
+
+        &.is-active {
+          .profile-image {
+            border: 2px solid $primary;
+          }
+        }
+      }
+    }
+  }
+}
