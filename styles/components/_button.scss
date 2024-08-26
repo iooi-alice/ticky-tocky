@@ -1,0 +1,27 @@
+%button-base {
+  @include inline-flexbox;
+
+  padding: 0 0.8rem;
+  border-radius: 0.6rem;
+}
+
+.btn-40 {
+  @extend %button-base;
+
+  height: 4rem;
+}
+
+.btn-32 {
+  @extend %button-base;
+
+  height: 3.2rem;
+}
+
+.btn-outline {
+  border: 0.1rem solid $gray50;
+  transition: $base-transition;
+
+  &:hover {
+    border-color: $gray30;
+  }
+}
