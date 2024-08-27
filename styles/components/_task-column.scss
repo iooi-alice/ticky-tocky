@@ -1,7 +1,7 @@
 .task-column {
   @include column-flexbox(between);
 
-  width: 35.4rem;
+  width: 100%;
   height: 100%;
   background-color: $gray80;
   border-radius: 1.2rem;
@@ -9,9 +9,10 @@
   &-header {
     @include flexbox(between);
 
+    flex-shrink: 0;
     width: 100%;
-    padding: 1.2rem 1.6rem;
-    border-bottom: 1px solid $gray50;
+    height: 5.6rem;
+    padding: 0 1.6rem;
 
     &-content {
       @include flexbox($gap: 0.8rem);
@@ -52,26 +53,23 @@
     }
   }
 
-  .card-list {
-    @include column-flexbox(start, $gap: 1.6rem);
+  .task-card-list {
+    @include column-flexbox(start, start, 1.6rem);
 
     overflow-y: auto;
     flex-grow: 1;
-
     width: 100%;
-    height: calc(100% - 1000rem);
-    padding: 0 2.4rem 2.4rem;
-
-    border: 1px solid green;
+    padding: 0 1.6rem 1.6rem;
 
     @include no-scrollbar;
   }
 
-  .card-item {
+  .task-card-item {
     width: 100%;
   }
 
   &-footer {
+    flex-shrink: 0;
     width: 100%;
 
     button {
@@ -79,7 +77,7 @@
       @include text-style(16, $primary);
 
       width: 100%;
-      height: 4.8rem;
+      height: 5.6rem;
       border-top: 0.1rem solid $gray60;
     }
   }
