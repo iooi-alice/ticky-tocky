@@ -1,9 +1,19 @@
 .container {
   @include flexbox(start, start);
+
+  overflow: hidden;
 }
 
 .board {
-  flex-grow: 1;
-  width: 100%;
+  @include column-flexbox(start, start);
+
+  width: calc(100% - 7.2rem);
   height: 100vh;
+
+  &-content {
+    @include column-flexbox(start, start);
+
+    width: 100%;
+    height: calc(100vh - 6rem);
+  }
 }
