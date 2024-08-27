@@ -1,8 +1,12 @@
 .board-content-header {
-  @include flexbox(between, $gap: 0.4rem);
+  @include flexbox(between);
 
+  flex-shrink: 0;
+
+  width: 100%;
   height: 4.8rem;
   padding: 0 3.2rem;
+
   border-bottom: 0.1rem solid $gray70;
 
   .header-title {
