@@ -18,6 +18,17 @@
   height: 3.2rem;
 }
 
+.btn-24 {
+  @extend %icon-button-base;
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  img {
+    width: 2rem;
+  }
+}
+
 .icon-btn-outline {
   border: 0.1rem solid $gray50;
   transition: $base-transition;
