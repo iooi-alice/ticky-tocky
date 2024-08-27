@@ -1,0 +1,86 @@
+.task-column {
+  @include column-flexbox(between);
+
+  width: 35.4rem;
+  height: 100%;
+  background-color: $gray80;
+  border-radius: 1.2rem;
+
+  &-header {
+    @include flexbox(between);
+
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    border-bottom: 1px solid $gray50;
+
+    &-content {
+      @include flexbox($gap: 0.8rem);
+
+      .task-column-title {
+        @include text-style(16, $gray10);
+      }
+
+      .task-column-count {
+        @include inline-flexbox;
+        @include text-style(12, $gray20);
+
+        width: 2rem;
+        height: 2rem;
+        background-color: $gray50;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+
+  &-options {
+    position: relative;
+
+    .task-options-wrapper {
+      position: absolute;
+      top: 4rem;
+      right: 0;
+
+      width: 12rem;
+
+      opacity: 0;
+
+      transition: opacity 100ms ease-in-out;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .card-list {
+    @include column-flexbox(start, $gap: 1.6rem);
+
+    overflow-y: auto;
+    flex-grow: 1;
+
+    width: 100%;
+    height: calc(100% - 1000rem);
+    padding: 0 2.4rem 2.4rem;
+
+    border: 1px solid green;
+
+    @include no-scrollbar;
+  }
+
+  .card-item {
+    width: 100%;
+  }
+
+  &-footer {
+    width: 100%;
+
+    button {
+      @include flexbox;
+      @include text-style(16, $primary);
+
+      width: 100%;
+      height: 4.8rem;
+      border-top: 0.1rem solid $gray60;
+    }
+  }
+}
