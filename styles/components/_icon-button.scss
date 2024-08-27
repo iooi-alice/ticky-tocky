@@ -7,8 +7,15 @@
 .btn-36 {
   @extend %icon-button-base;
 
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.btn-32 {
+  @extend %icon-button-base;
+
+  width: 3.2rem;
   height: 3.2rem;
-  padding: 0 0.4rem;
 }
 
 .icon-btn-outline {
