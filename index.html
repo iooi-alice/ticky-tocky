@@ -136,33 +136,61 @@
             </div>
           </header>
 
-          <section class="task-wrapper">
-            <ol class="task-list">
-              <li class="task-item">
-                <ol class="card-list">
-                  <li class="card-item">
-                    <article class="card">
-                      <div class="card-thumbnail">
+          <ol class="task-column-list">
+            <li class="task-column-item">
+              <!-- Column -->
+              <article class="task-column">
+                <header class="task-column-header">
+                  <div class="task-column-header-content">
+                    <h2 class="task-column-title">To Do</h2>
+                    <span class="task-column-count">2</span>
+                  </div>
+
+                  <div class="task-column-options">
+                    <button class="icon-btn-outline btn-32" type="button" aria-label="Kebab">
+                      <img src="./assets/svg/ic-kebab.svg" alt="Kebab icon" />
+                    </button>
+                    <div class="task-options-wrapper">
+                      <ul class="option-list">
+                        <li class="option-item">
+                          <button type="button" aria-label="Option 1">Edit</button>
+                        </li>
+                        <li class="option-item">
+                          <button type="button" aria-label="Option 2">Delete</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+
+                <ol class="task-card-list">
+                  <li class="task-card-item">
+                    <!-- Card -->
+                    <article class="task-card">
+                      <div class="task-card-thumbnail">
                         <img src="" alt="Card thumbnail" />
                       </div>
-                      <div class="card-content">
-                        <h2 class="card-title">Stylelint</h2>
-                        <ol class="tag-list">
-                          <li class="tag-item">
-                            <div class="tag">tag 1</div>
-                          </li>
-                          <li class="tag-item">
-                            <div class="tag">tag 2</div>
-                          </li>
-                          <li class="tag-item">
-                            <div class="tag">tag 3</div>
-                          </li>
-                        </ol>
-                        <div>
-                          <div class="date">
+                      <div class="task-card-content">
+                        <div class="task-card-title-tags">
+                          <h2 class="task-card-title">Stylelint</h2>
+                          <ol class="task-card-tag-list">
+                            <li class="task-card-tag-item">
+                              <div class="tag">tag 1</div>
+                            </li>
+                            <li class="tag-item">
+                              <div class="tag">tag 2</div>
+                            </li>
+                            <li class="tag-item">
+                              <div class="tag">tag 3</div>
+                            </li>
+                          </ol>
+                        </div>
+                        <div class="task-card-meta">
+                          <div class="task-card-date">
                             <img src="./assets/svg/ic-calendar-default.svg" alt="Calendar icon" />
+                            2024.08.27
                           </div>
-                          <div class="author">
+                          <div class="task-card-author">
                             <img src="./assets/images/profile-avatar.jpg" alt="Author profile image" />
                           </div>
                         </div>
@@ -170,18 +198,22 @@
                     </article>
                   </li>
                 </ol>
-              </li>
-            </ol>
-            <button type="button" aria-label="Add schedule">
-              <img src="./assets/svg/ic-add-active.svg" alt="add icon" />
-              Add Task
-            </button>
-          </section>
+
+                <footer class="task-column-footer">
+                  <button type="button" aria-label="Add schedule">
+                    <img src="./assets/svg/ic-add-active.svg" alt="add icon" />
+                    Add Task
+                  </button>
+                </footer>
+              </article>
+            </li>
+          </ol>
         </main>
       </div>
     </div>
 
     <script src="./js/gnb.js"></script>
     <script src="./js/profile.js"></script>
+    <script src="./js/options.js"></script>
   </body>
 </html>
