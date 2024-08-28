@@ -1,6 +1,6 @@
 const inviteButton = document.querySelector('.invite-button');
 const inviteModal = document.getElementById('invite-modal');
-const inviteModalCloseButton = document.querySelector('.invite-modal .cancel-button');
+const inviteModalCloseButton = inviteModal.querySelector('.cancel-button');
 const overlay = document.querySelector('.overlay');
 
 function openInviteModal() {
