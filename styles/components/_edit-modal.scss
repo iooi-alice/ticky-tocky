@@ -1,0 +1,17 @@
+.edit-modal {
+  .edit-form {
+    @include column-flexbox(start, $gap: 1.6rem);
+
+    .button-group {
+      @include flexbox($gap: 0.8rem);
+
+      width: 50%;
+      margin-left: auto;
+
+      button {
+        flex-shrink: 0;
+        width: 50%;
+      }
+    }
+  }
+}
