@@ -6,11 +6,11 @@
   }
 
   .input-file {
-    @include column-flexbox($gap: 0.2rem);
+    @include flexbox;
 
     cursor: pointer;
 
-    width: 16rem;
+    width: 100%;
     height: 16rem;
     margin-bottom: 1.2rem;
 
@@ -20,13 +20,17 @@
 
     transition: $base-transition;
 
-    img {
-      width: 3.2rem;
-      height: 3.2rem;
-    }
+    .file-upload-info {
+      @include column-flexbox($gap: 0.2rem);
 
-    span {
-      @include text-style(14, $gray20);
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      span {
+        @include text-style(14, $gray20);
+      }
     }
 
     &:hover {
