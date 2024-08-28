@@ -22,3 +22,12 @@
   background-color: $gray80;
   border-radius: 0.4rem;
 }
+
+.column-title-tag {
+  @include inline-flexbox;
+  @include text-style(14, $primary);
+
+  padding: 0 0.8rem;
+  background-color: $opacity-white-5;
+  border-radius: 0.4rem;
+}
