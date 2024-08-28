@@ -2,46 +2,43 @@
   @include inline-flexbox;
 
   border-radius: 0.6rem;
+  transition: $base-transition;
 }
 
-.btn-36 {
+.icon-btn-ghost {
   @extend %icon-button-base;
 
+  &:hover {
+    background-color: $opacity-white-5;
+  }
+}
+
+.icon-btn-outline {
+  @extend %icon-button-base;
+
+  border: 0.1rem solid $gray50;
+
+  &:not(.is-active):hover {
+    border-color: $gray30;
+  }
+}
+
+.icon-btn-36 {
   width: 3.6rem;
   height: 3.6rem;
 }
 
-.btn-32 {
-  @extend %icon-button-base;
-
+.icon-btn-32 {
   width: 3.2rem;
   height: 3.2rem;
 }
 
-.btn-24 {
-  @extend %icon-button-base;
-
+.icon-btn-24 {
   width: 2.4rem;
   height: 2.4rem;
 
   img {
     width: 2rem;
-  }
-}
-
-.icon-btn-outline {
-  border: 0.1rem solid $gray50;
-  transition: $base-transition;
-
-  &:hover {
-    border-color: $gray30;
-  }
-}
-
-.icon-btn {
-  transition: $base-transition;
-
-  &:hover {
-    background-color: $opacity-white-5;
+    height: 2rem;
   }
 }
