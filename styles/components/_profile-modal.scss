@@ -1,0 +1,46 @@
+.profile-modal {
+  @extend %modal-base;
+
+  @include column-flexbox($gap: 1.6rem);
+
+  position: absolute;
+  z-index: $modal-dropdown-level;
+  top: 4.4rem;
+  right: 0;
+
+  padding: 2rem;
+
+  visibility: hidden;
+  opacity: 0;
+
+  .profile-user {
+    &-content {
+      @include column-flexbox($gap: 1.2rem);
+    }
+
+    &-info {
+      text-align: center;
+
+      .user-name {
+        @include text-style(16, $gray10, bold);
+
+        display: block;
+      }
+
+      .user-email {
+        @include text-style(14, $gray20);
+      }
+    }
+  }
+
+  .button-group {
+    @include column-flexbox($gap: 0.8rem);
+
+    width: 20rem;
+  }
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
