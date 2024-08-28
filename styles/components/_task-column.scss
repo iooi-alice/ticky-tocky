@@ -36,6 +36,14 @@
   &-options {
     position: relative;
 
+    button {
+      transition: $base-transition;
+
+      &.is-active {
+        border-color: $primary;
+      }
+    }
+
     .task-options-wrapper {
       position: absolute;
       top: 4rem;
@@ -43,11 +51,13 @@
 
       width: 12rem;
 
+      visibility: hidden;
       opacity: 0;
 
       transition: opacity 100ms ease-in-out;
 
       &.is-active {
+        visibility: visible;
         opacity: 1;
       }
     }
