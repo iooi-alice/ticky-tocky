@@ -1,0 +1,26 @@
+%modal-base {
+  position: absolute;
+  z-index: $modal-level;
+
+  background-color: $gray90;
+  border: 0.1rem solid $gray70;
+  border-radius: 1.6rem;
+
+  transition: $base-transition;
+}
+
+.modal {
+  @extend %modal-base;
+
+  box-shadow: $modal-shadow;
+
+  &-header {
+    @include flexbox(between);
+
+    padding: 2rem 2rem 0;
+
+    h2 {
+      @include text-style(18, $gray10);
+    }
+  }
+}
