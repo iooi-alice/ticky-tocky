@@ -1,0 +1,115 @@
+.invitations-modal {
+  @extend %modal-base;
+
+  @include column-flexbox(start, start, 1.6rem);
+
+  position: absolute;
+  z-index: $modal-dropdown-level;
+  top: 4.4rem;
+  right: 0;
+
+  padding: 2rem;
+
+  visibility: hidden;
+  opacity: 0;
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &-header {
+    @include flexbox(start, $gap: 0.8rem);
+
+    h2 {
+      @include text-style(18, $gray10);
+    }
+  }
+
+  &-search {
+    position: relative;
+    width: 100%;
+
+    img {
+      @include pos-center-y;
+
+      left: 0.8rem;
+    }
+
+    input {
+      @include text-style(14, $gray10);
+
+      width: 100%;
+      height: 3.6rem;
+      padding-left: 3.6rem;
+
+      background-color: $gray70;
+      border: 0.1rem solid $gray60;
+      border-radius: 0.6rem;
+
+      &::placeholder {
+        color: $gray40;
+      }
+    }
+  }
+
+  .invitation-list {
+    overflow-y: auto;
+    max-height: 30rem;
+    padding-right: 1.2rem;
+
+    &::-webkit-scrollbar {
+      width: 0.6rem;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray40;
+      border-radius: 99rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .invitation-item {
+      padding-bottom: 1.6rem;
+      border-bottom: 0.1rem solid $gray70;
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    .invitation-details {
+      @include flexbox(start, $gap: 1.6rem);
+
+      margin-bottom: 1.2rem;
+
+      &-header {
+        @include column-flexbox(start, start);
+
+        span {
+          @include text-style(14, $gray20);
+        }
+      }
+
+      &-content {
+        @include column-flexbox(start, start);
+
+        span {
+          @include text-style(14, $gray10);
+        }
+      }
+    }
+
+    @include column-flexbox(start, start, 1.6rem);
+  }
+
+  .button-group {
+    @include flexbox($gap: 0.8rem);
+
+    width: 28rem;
+  }
+}
