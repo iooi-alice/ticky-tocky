@@ -16,6 +16,9 @@ function openColumnEditModal() {
 }
 
 function closeColumnEditModal() {
+  const inputElement = columnEditModal.querySelector('.input');
+  inputElement.value = '';
+
   columnEditModal.classList.remove('is-open');
   columnEditModal.close();
 

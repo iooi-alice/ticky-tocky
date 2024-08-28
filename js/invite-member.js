@@ -11,6 +11,9 @@ function openInviteModal() {
 }
 
 function closeInviteModal() {
+  const inputElement = inviteModal.querySelector('.input');
+  inputElement.value = '';
+
   inviteModal.classList.remove('is-open');
   inviteModal.close();
 
