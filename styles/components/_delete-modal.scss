@@ -1,0 +1,25 @@
+.detele-modal {
+  min-width: 30rem;
+
+  .delete-info {
+    @include column-flexbox($gap: 0.4rem);
+
+    margin-bottom: 2.4rem;
+
+    &-text {
+      text-align: center;
+
+      h2 {
+        @include text-style(18, $gray10);
+      }
+
+      span {
+        @include text-style(14, $gray20);
+      }
+    }
+  }
+
+  .button-group {
+    @include flexbox($gap: 0.8rem);
+  }
+}
