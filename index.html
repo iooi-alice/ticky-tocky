@@ -662,7 +662,14 @@
         <form class="form-invite" action="/" method="POST">
           <div class="input-group">
             <label class="label" for="invite-email">Email</label>
-            <input class="input" type="text" name="invite-email" id="invite-email" />
+            <input
+              class="input"
+              type="text"
+              name="invite-email"
+              id="invite-email"
+              placeholder="Email address"
+              required
+            />
           </div>
           <div class="button-group">
             <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
@@ -680,7 +687,15 @@
         <form class="form-add" action="/" method="POST">
           <div class="input-group">
             <label class="label" for="column-title">Title</label>
-            <input class="input" type="text" name="column-title" id="column-title" />
+            <input
+              class="input"
+              type="text"
+              name="column-title"
+              id="column-title"
+              placeholder="Enter title"
+              maxlength="13"
+              required
+            />
           </div>
           <div class="button-group">
             <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
@@ -698,7 +713,7 @@
         <form class="form-edit" action="/" method="POST">
           <div class="input-group">
             <label class="label" for="column-title-edit">Title</label>
-            <input class="input" type="text" name="column-title-edit" id="column-title-edit" />
+            <input class="input" type="text" name="column-title-edit" id="column-title-edit" maxlength="13" required />
           </div>
           <div class="button-group">
             <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
@@ -727,6 +742,94 @@
         </form>
       </div>
     </dialog>
+
+    <aside class="modal-create-card">
+      <header class="">
+        <h2>Add Task</h2>
+      </header>
+      <div class="modal-content">
+        <form class="form-create-card" action="/" method="POST">
+          <div class="form-field">
+            <!-- field left -->
+            <div class="form-field-left">
+              <div class="image-field">
+                <p class="image-field-label">Image</p>
+                <label class="input-file" for="input-file">
+                  <img src="./assets/svg/ic-add-photo.svg" alt="Add Image" />
+                  <span>Upload Image</span>
+                </label>
+                <input class="input" type="file" name="input-file" id="input-file" />
+              </div>
+
+              <button class="reset-button btn-secondary is-destructive btn-36" type="button" aria-label="Reset Image">
+                Reset Image
+              </button>
+            </div>
+
+            <!-- field right -->
+            <div class="form-field-right">
+              <div class="form-group">
+                <div class="input-group">
+                  <label class="label" for="column-name">Column Name</label>
+                  <div class="input disabled">
+                    <span class="column-title-tag">To Do</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="label" id="author-label" for="author">Author</label>
+                  <div class="input disabled">
+                    <span class="avatar-24">
+                      <img src="./assets/images/profile-avatar.jpg" alt="Profile Image" />
+                    </span>
+                    <span>Alice</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="label" for="title">Title</label>
+                <input
+                  class="input"
+                  type="text"
+                  name="title"
+                  id="title"
+                  maxlength="15"
+                  placeholder="Enter title"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label class="label" for="description">Description</label>
+                <textarea
+                  class="textarea"
+                  name="description"
+                  id="description"
+                  placeholder="Describe the schedule"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="date-field">
+                <label class="label" for="deadline">Deadline</label>
+                <input class="date" type="date" name="deadline" id="deadline" placeholder="YYYY. MM. DD" required />
+              </div>
+
+              <div class="input-group">
+                <label class="label" for="tag">Tag</label>
+                <input class="input" type="text" name="tag" id="tag" placeholder="Press enter to add tags" />
+              </div>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
+            <button class="submit-button btn-secondary btn-36" type="submit" aria-label="Create">Create</button>
+          </div>
+        </form>
+      </div>
+    </aside>
 
     <script src="./js/gnb.js"></script>
     <script src="./js/profile.js"></script>
