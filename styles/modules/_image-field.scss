@@ -1,0 +1,40 @@
+.image-field {
+  &-label {
+    @include text-style(16, $gray20);
+
+    margin-bottom: 0.8rem;
+  }
+
+  .input-file {
+    @include column-flexbox($gap: 0.2rem);
+
+    cursor: pointer;
+
+    width: 16rem;
+    height: 16rem;
+    margin-bottom: 1.2rem;
+
+    background-color: $gray70;
+    border: 0.1rem solid $gray60;
+    border-radius: 0.6rem;
+
+    transition: $base-transition;
+
+    img {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    span {
+      @include text-style(14, $gray20);
+    }
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
