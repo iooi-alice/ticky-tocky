@@ -654,15 +654,15 @@
 
     <div class="overlay"></div>
 
-    <dialog class="modal invite-modal" id="invite-modal">
+    <dialog class="modal modal-invite-members" id="invite-modal">
       <header class="modal-header">
         <h2>Invite members</h2>
       </header>
       <div class="modal-content">
-        <form class="invite-form" action="/" method="POST">
+        <form class="form-invite" action="/" method="POST">
           <div class="input-group">
-            <label class="label" for="email">Email</label>
-            <input class="input" type="text" name="email" id="email" />
+            <label class="label" for="invite-email">Email</label>
+            <input class="input" type="text" name="invite-email" id="invite-email" />
           </div>
           <div class="button-group">
             <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
@@ -672,15 +672,33 @@
       </div>
     </dialog>
 
-    <dialog class="modal edit-modal" id="edit-modal">
+    <dialog class="modal modal-create-column" id="create-modal">
+      <header class="modal-header">
+        <h2>Add Column</h2>
+      </header>
+      <div class="modal-content">
+        <form class="form-add" action="/" method="POST">
+          <div class="input-group">
+            <label class="label" for="column-title">Title</label>
+            <input class="input" type="text" name="column-title" id="column-title" />
+          </div>
+          <div class="button-group">
+            <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
+            <button class="submit-button btn-secondary btn-36" type="submit" aria-label="Create">Create</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog class="modal modal-edit-column" id="edit-modal">
       <header class="modal-header">
         <h2>Edit Column</h2>
       </header>
       <div class="modal-content">
-        <form class="edit-form" action="/" method="POST">
+        <form class="form-edit" action="/" method="POST">
           <div class="input-group">
-            <label class="label" for="title">Title</label>
-            <input class="input" type="text" name="title" id="title" />
+            <label class="label" for="column-title-edit">Title</label>
+            <input class="input" type="text" name="column-title-edit" id="column-title-edit" />
           </div>
           <div class="button-group">
             <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
@@ -715,6 +733,7 @@
     <script src="./js/column-options.js"></script>
     <script src="./js/invitations.js"></script>
     <script src="./js/invite-member.js"></script>
+    <script src="./js/column-create.js"></script>
     <script src="./js/column-edit.js"></script>
     <script src="./js/column-delete.js"></script>
   </body>
