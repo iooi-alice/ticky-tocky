@@ -1,5 +1,5 @@
-.invite-modal {
-  .invite-form {
+.modal-invite-members {
+  .form-invite {
     @include column-flexbox(start, $gap: 1.6rem);
 
     .button-group {
