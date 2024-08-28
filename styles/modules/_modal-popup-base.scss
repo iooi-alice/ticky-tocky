@@ -11,8 +11,17 @@
 .modal {
   @extend %modal-popup-base;
 
+  @include pos-center;
+
   z-index: $modal-level;
+  transform: translate(-50%, calc(-50% + 3rem));
+
+  min-width: 36rem;
+
+  opacity: 0;
   box-shadow: $modal-shadow;
+
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 
   &-header {
     @include flexbox(between);
@@ -22,6 +31,15 @@
     h2 {
       @include text-style(18, $gray10);
     }
+  }
+
+  &-content {
+    padding: 2rem;
+  }
+
+  &.is-open {
+    transform: translate(-50%, -50%);
+    opacity: 1;
   }
 }
 
