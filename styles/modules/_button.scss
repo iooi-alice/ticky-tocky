@@ -37,6 +37,15 @@
     color: black;
     background-color: $primary;
   }
+
+  &.is-destructive {
+    color: $red;
+
+    &:hover {
+      color: $gray10;
+      background-color: $red;
+    }
+  }
 }
 
 .btn-tertiaty {
