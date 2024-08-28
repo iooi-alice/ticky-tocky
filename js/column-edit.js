@@ -1,6 +1,7 @@
 const columnEditButtons = document.querySelectorAll('.task-options-wrapper .edit-button');
 const columnEditModal = document.getElementById('edit-modal');
 const columnEditModalCloseButton = columnEditModal.querySelector('.cancel-button');
+const inputElement = columnEditModal.querySelector('.input');
 
 function openColumnEditModal() {
   const optionsContainerElement = this.closest('.task-column-options');
@@ -13,10 +14,13 @@ function openColumnEditModal() {
   columnEditModal.classList.add('is-open');
 
   overlay.style.display = 'block';
+
+  const headerElement = this.closest('.task-column-header');
+  const columnTitle = headerElement.querySelector('.task-column-title').innerHTML;
+  inputElement.value = columnTitle;
 }
 
 function closeColumnEditModal() {
-  const inputElement = columnEditModal.querySelector('.input');
   inputElement.value = '';
 
   columnEditModal.classList.remove('is-open');
