@@ -1,28 +1,10 @@
 .invite-members {
   @include flexbox($gap: 1.2rem);
 
-  position: relative;
-
   padding: 0.4rem 1.2rem 0.4rem 0.6rem;
-
   border: 0.1rem solid $gray70;
   border-radius: 999rem;
-
   transition: $base-transition;
-
-  &::after {
-    @include pos-center-y;
-
-    content: '';
-
-    right: -1.8rem;
-
-    display: block;
-
-    height: 2.4rem;
-
-    border: 0.01rem solid $gray60;
-  }
 
   &:hover {
     border-color: $gray30;
