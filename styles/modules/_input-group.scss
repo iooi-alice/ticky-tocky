@@ -23,3 +23,21 @@
     }
   }
 }
+
+.textarea {
+  @include text-style(14, $gray10);
+
+  resize: none;
+
+  width: 100%;
+  height: 8rem;
+  padding: 0.8rem 1.6rem;
+
+  background-color: $gray70;
+  border: 0.1rem solid $gray60;
+  border-radius: 0.6rem;
+
+  &::placeholder {
+    color: $gray40;
+  }
+}
