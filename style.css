@@ -704,66 +704,81 @@ input:autofill:active {
   color: #e0e0e0;
 }
 
-.invite-members {
+.task-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.2rem;
-  position: relative;
-  padding: 0.4rem 1.2rem 0.4rem 0.6rem;
-  border: 0.1rem solid #24252d;
-  border-radius: 999rem;
+  gap: 1.6rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 1.6rem;
+  background-color: #272931;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
   transition: all ease-in-out 0.2s;
 }
-.invite-members::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  content: "";
-  right: -1.8rem;
-  display: block;
-  height: 2.4rem;
-  border: 0.01rem solid #272931;
+.task-card:hover {
+  border: 1px solid #37e8b4;
 }
-.invite-members:hover {
-  border-color: #6a6d81;
+.task-card-thumbnail {
+  overflow: hidden;
+  width: 100%;
+  height: 16rem;
+  background-color: #1a191f;
+  border-radius: 0.6rem;
 }
-.invite-members .member-group,
-.invite-members .member-list {
+.task-card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.task-card-content {
+  width: 100%;
+}
+.task-card-title-tags {
+  margin-bottom: 1.6rem;
+}
+.task-card-title-tags .task-card-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #e0e0e0;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.task-card-title-tags .task-card-tag-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+.task-card-title-tags .task-card-tag-item:first-child {
+  color: #924bff;
+}
+.task-card-title-tags .task-card-tag-item:nth-child(2) {
+  color: #406aff;
+}
+.task-card-title-tags .task-card-tag-item:nth-child(3) {
+  color: #00a3ff;
+}
+.task-card-title-tags .task-card-tag-item:nth-child(4) {
+  color: #ffed46;
+}
+.task-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task-card-meta .task-card-date {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-}
-.invite-members .additional-members {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  background-color: #24252d;
-  border-radius: 50%;
-}
-.invite-members button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.2rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 2.2rem;
-  color: #e0e0e0;
-  position: relative;
-}
-.invite-members button::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  content: "";
-  left: -0.6rem;
-  display: block;
-  height: 100%;
-  border: 0.01rem solid #272931;
+  line-height: 1.4rem;
+  color: #6a6d81;
 }
 
 .task-column {
@@ -883,83 +898,6 @@ input:autofill:active {
   color: #474a5b;
 }
 
-.task-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  cursor: pointer;
-  width: 100%;
-  padding: 1.6rem;
-  background-color: #272931;
-  border: 1px solid transparent;
-  border-radius: 0.6rem;
-  transition: all ease-in-out 0.2s;
-}
-.task-card:hover {
-  border: 1px solid #37e8b4;
-}
-.task-card-thumbnail {
-  overflow: hidden;
-  width: 100%;
-  height: 16rem;
-  background-color: #1a191f;
-  border-radius: 0.6rem;
-}
-.task-card-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.task-card-content {
-  width: 100%;
-}
-.task-card-title-tags {
-  margin-bottom: 1.6rem;
-}
-.task-card-title-tags .task-card-title {
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 2.4rem;
-  color: #e0e0e0;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-}
-.task-card-title-tags .task-card-tag-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.6rem;
-}
-.task-card-title-tags .task-card-tag-item:first-child {
-  color: #924bff;
-}
-.task-card-title-tags .task-card-tag-item:nth-child(2) {
-  color: #406aff;
-}
-.task-card-title-tags .task-card-tag-item:nth-child(3) {
-  color: #00a3ff;
-}
-.task-card-title-tags .task-card-tag-item:nth-child(4) {
-  color: #ffed46;
-}
-.task-card-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.task-card-meta .task-card-date {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.4rem;
-  color: #6a6d81;
-}
-
 .option-list {
   height: auto;
   padding: 0.6rem;
@@ -984,6 +922,68 @@ input:autofill:active {
 }
 .option-item:hover button {
   background-color: #30313c;
+}
+
+.invite-members {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  position: relative;
+  padding: 0.4rem 1.2rem 0.4rem 0.6rem;
+  border: 0.1rem solid #24252d;
+  border-radius: 999rem;
+  transition: all ease-in-out 0.2s;
+}
+.invite-members::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  right: -1.8rem;
+  display: block;
+  height: 2.4rem;
+  border: 0.01rem solid #272931;
+}
+.invite-members:hover {
+  border-color: #6a6d81;
+}
+.invite-members .member-group,
+.invite-members .member-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.invite-members .additional-members {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #24252d;
+  border-radius: 50%;
+}
+.invite-members button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #e0e0e0;
+  position: relative;
+}
+.invite-members button::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  left: -0.6rem;
+  display: block;
+  height: 100%;
+  border: 0.01rem solid #272931;
 }
 
 .overlay {
@@ -1153,14 +1153,14 @@ input:autofill:active {
   width: 28rem;
 }
 
-.invite-modal .invite-form {
+.modal-invite-members .form-invite {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 1.6rem;
 }
-.invite-modal .invite-form .button-group {
+.modal-invite-members .form-invite .button-group {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1168,19 +1168,19 @@ input:autofill:active {
   width: 50%;
   margin-left: auto;
 }
-.invite-modal .invite-form .button-group button {
+.modal-invite-members .form-invite .button-group button {
   flex-shrink: 0;
   width: 50%;
 }
 
-.edit-modal .edit-form {
+.modal-create-column .form-add {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 1.6rem;
 }
-.edit-modal .edit-form .button-group {
+.modal-create-column .form-add .button-group {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1188,7 +1188,27 @@ input:autofill:active {
   width: 50%;
   margin-left: auto;
 }
-.edit-modal .edit-form .button-group button {
+.modal-create-column .form-add .button-group button {
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.modal-edit-column .form-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+.modal-edit-column .form-edit .button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 50%;
+  margin-left: auto;
+}
+.modal-edit-column .form-edit .button-group button {
   flex-shrink: 0;
   width: 50%;
 }

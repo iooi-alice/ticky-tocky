@@ -25,16 +25,17 @@
 @import './modules/tags';
 
 @import './components/breadcrumb';
-@import './components/invite-members';
-@import './components/task-column';
-@import './components/task-column-empty';
-@import './components/task-card';
+@import './components/card';
+@import './components/column';
+@import './components/column-empty';
 @import './components/column-options';
+@import './components/invite-members';
 @import './components/overlay';
 @import './components/profile-modal';
 @import './components/invitations-modal';
 @import './components/invite-member-modal';
-@import './components/edit-modal';
+@import './components/column-create-modal';
+@import './components/column-edit-modal';
 @import './components/delete-modal';
 
 @import './layouts/container';
