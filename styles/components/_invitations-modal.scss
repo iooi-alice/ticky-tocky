@@ -1,29 +1,14 @@
 .invitations-modal {
-  @extend %modal-base;
-
   @include column-flexbox(start, start, 1.6rem);
 
-  position: absolute;
-  z-index: $modal-dropdown-level;
   top: 4.4rem;
   right: 0;
-
-  padding: 2rem;
-
   visibility: hidden;
   opacity: 0;
 
   &.is-active {
     visibility: visible;
     opacity: 1;
-  }
-
-  &-header {
-    @include flexbox(start, $gap: 0.8rem);
-
-    h2 {
-      @include text-style(18, $gray10);
-    }
   }
 
   &-search {

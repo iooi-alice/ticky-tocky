@@ -1,15 +1,8 @@
 .profile-modal {
-  @extend %modal-base;
-
   @include column-flexbox($gap: 1.6rem);
 
-  position: absolute;
-  z-index: $modal-dropdown-level;
   top: 4.4rem;
   right: 0;
-
-  padding: 2rem;
-
   visibility: hidden;
   opacity: 0;
 
