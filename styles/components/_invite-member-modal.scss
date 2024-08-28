@@ -1,0 +1,23 @@
+.invite-modal {
+  @include pos-center;
+
+  min-width: 36rem;
+
+  .invite-form {
+    @include column-flexbox(start, $gap: 1.6rem);
+
+    padding: 2rem;
+
+    .button-group {
+      @include flexbox($gap: 0.8rem);
+
+      width: 50%;
+      margin-left: auto;
+
+      button {
+        flex-shrink: 0;
+        width: 50%;
+      }
+    }
+  }
+}

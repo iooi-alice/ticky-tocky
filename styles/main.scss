@@ -17,6 +17,7 @@
 @import './mixins/text-style';
 @import './mixins/truncate';
 
+@import './components/modal-base';
 @import './components/icon-button';
 @import './components/avatar';
 @import './components/breadcrumb';
@@ -26,6 +27,12 @@
 @import './components/task-card';
 @import './components/options';
 @import './components/tags';
+@import './components/button';
+@import './components/input-group';
+@import './components/profile-modal';
+@import './components/invitations-modal';
+@import './components/invite-member-modal';
+@import './components/overlay';
 
 @import './layouts/container';
 @import './layouts/gnb';
