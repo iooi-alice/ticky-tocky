@@ -490,6 +490,13 @@ input:autofill:active {
   color: black;
   background-color: #37e8b4;
 }
+.btn-secondary.is-destructive {
+  color: #f34642;
+}
+.btn-secondary.is-destructive:hover {
+  color: #e0e0e0;
+  background-color: #f34642;
+}
 
 .btn-tertiaty {
   color: #e0e0e0;
@@ -599,8 +606,16 @@ input:autofill:active {
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 200;
+  transform: translate(-50%, calc(-50% + 3rem));
+  min-width: 36rem;
+  opacity: 0;
   box-shadow: 0 16px 32px 0 rgba(5, 5, 5, 0.8);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 .modal-header {
   display: flex;
@@ -613,6 +628,13 @@ input:autofill:active {
   font-weight: 500;
   line-height: 2.4rem;
   color: #e0e0e0;
+}
+.modal-content {
+  padding: 2rem;
+}
+.modal.is-open {
+  transform: translate(-50%, -50%);
+  opacity: 1;
 }
 
 .popup {
@@ -964,6 +986,17 @@ input:autofill:active {
   background-color: #30313c;
 }
 
+.overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .profile-modal {
   display: flex;
   flex-direction: column;
@@ -1120,20 +1153,12 @@ input:autofill:active {
   width: 28rem;
 }
 
-.invite-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 36rem;
-}
 .invite-modal .invite-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 1.6rem;
-  padding: 2rem;
 }
 .invite-modal .invite-form .button-group {
   display: flex;
@@ -1148,15 +1173,57 @@ input:autofill:active {
   width: 50%;
 }
 
-.overlay {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+.edit-modal .edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+.edit-modal .edit-form .button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 50%;
+  margin-left: auto;
+}
+.edit-modal .edit-form .button-group button {
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.detele-modal {
+  min-width: 30rem;
+}
+.detele-modal .delete-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+.detele-modal .delete-info-text {
+  text-align: center;
+}
+.detele-modal .delete-info-text h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #e0e0e0;
+}
+.detele-modal .delete-info-text span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #888ca7;
+}
+.detele-modal .button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 .container {
