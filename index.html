@@ -265,7 +265,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">Stylelint</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Style</div>
                             </li>
@@ -300,7 +300,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">User Flow</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">UIUX</div>
                             </li>
@@ -366,7 +366,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">Code convention</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Setting</div>
                             </li>
@@ -402,7 +402,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">Daliy Scrum</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Scrum</div>
                             </li>
@@ -437,7 +437,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">Dashboard Edit</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Progress</div>
                             </li>
@@ -466,7 +466,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">Responsive</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Progress</div>
                             </li>
@@ -542,7 +542,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">react-hook-form</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Refactor</div>
                             </li>
@@ -577,7 +577,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">Set up husky</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Husky</div>
                             </li>
@@ -606,7 +606,7 @@
                         <div class="task-card-title-tags">
                           <h2 class="task-card-title">Invitation API</h2>
 
-                          <ol class="task-card-tag-list">
+                          <ol class="tag-list">
                             <li class="task-card-tag-item">
                               <div class="tag">Swagger</div>
                             </li>
@@ -664,7 +664,7 @@
             <label class="label" for="invite-email">Email</label>
             <input
               class="input"
-              type="text"
+              type="email"
               name="invite-email"
               id="invite-email"
               placeholder="Email address"
@@ -743,8 +743,8 @@
       </div>
     </dialog>
 
-    <aside class="modal-create-card">
-      <header class="">
+    <dialog class="modal modal-create-card" id="modal-create-card">
+      <header class="modal-header">
         <h2>Add Task</h2>
       </header>
       <div class="modal-content">
@@ -755,8 +755,10 @@
               <div class="image-field">
                 <p class="image-field-label">Image</p>
                 <label class="input-file" for="input-file">
-                  <img src="./assets/svg/ic-add-photo.svg" alt="Add Image" />
-                  <span>Upload Image</span>
+                  <div class="file-upload-info">
+                    <img src="./assets/svg/ic-add-photo.svg" alt="Add Image" />
+                    <span>Upload Image</span>
+                  </div>
                 </label>
                 <input class="input" type="file" name="input-file" id="input-file" />
               </div>
@@ -772,7 +774,7 @@
                 <div class="input-group">
                   <label class="label" for="column-name">Column Name</label>
                   <div class="input disabled">
-                    <span class="column-title-tag">To Do</span>
+                    <span class="tag-column-name">To Do</span>
                   </div>
                 </div>
 
@@ -818,7 +820,10 @@
 
               <div class="input-group">
                 <label class="label" for="tag">Tag</label>
-                <input class="input" type="text" name="tag" id="tag" placeholder="Press enter to add tags" />
+                <div class="input tag-group">
+                  <ol class="tag-list"></ol>
+                  <input type="text" name="tag" id="tag" placeholder="Press enter to add tags" maxlength="8" />
+                </div>
               </div>
             </div>
           </div>
@@ -829,7 +834,7 @@
           </div>
         </form>
       </div>
-    </aside>
+    </dialog>
 
     <script src="./js/gnb.js"></script>
     <script src="./js/profile.js"></script>
@@ -839,5 +844,6 @@
     <script src="./js/column-create.js"></script>
     <script src="./js/column-edit.js"></script>
     <script src="./js/column-delete.js"></script>
+    <script src="./js/card-create.js"></script>
   </body>
 </html>
