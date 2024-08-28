@@ -17,29 +17,45 @@
     &-nav {
       @include flexbox($gap: 0.8rem);
 
-      .profile {
-        @include flexbox($gap: 0.8rem);
+      .invitations {
+        position: relative;
 
-        &-image {
-          border: 0.2rem solid transparent;
+        button {
           transition: $base-transition;
-        }
 
-        &-info {
-          @include flexbox($gap: 0.2rem);
-
-          .username {
-            @include text-style(16, $gray10);
+          &.is-active {
+            border-color: $primary;
           }
+        }
+      }
 
-          img {
+      .profile {
+        position: relative;
+
+        &-button {
+          @include flexbox($gap: 0.8rem);
+
+          &-image {
+            border: 0.2rem solid transparent;
             transition: $base-transition;
           }
-        }
 
-        &.is-active {
-          .profile-image {
-            border: 0.2rem solid $primary;
+          &-info {
+            @include flexbox($gap: 0.2rem);
+
+            .username {
+              @include text-style(16, $gray10);
+            }
+
+            img {
+              transition: $base-transition;
+            }
+          }
+
+          &.is-active {
+            .profile-button-image {
+              border: 0.2rem solid $primary;
+            }
           }
         }
       }
