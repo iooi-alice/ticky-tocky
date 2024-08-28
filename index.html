@@ -659,7 +659,7 @@
         <h2>Invite members</h2>
       </header>
       <div class="modal-content">
-        <form class="invite-form" action="/">
+        <form class="invite-form" action="/" method="POST">
           <div class="input-group">
             <label class="label" for="email">Email</label>
             <input class="input" type="text" name="email" id="email" />
@@ -677,10 +677,10 @@
         <h2>Edit Column</h2>
       </header>
       <div class="modal-content">
-        <form class="edit-form" action="/">
+        <form class="edit-form" action="/" method="POST">
           <div class="input-group">
             <label class="label" for="title">Title</label>
-            <input class="input" type="text" name="email" id="email" />
+            <input class="input" type="text" name="title" id="title" />
           </div>
           <div class="button-group">
             <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
@@ -701,7 +701,7 @@
             <span>This action cannot be undone</span>
           </div>
         </div>
-        <form class="button-group" action="/">
+        <form class="button-group" action="/" method="POST">
           <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
           <button class="delete-button btn-secondary is-destructive btn-36" type="submit" aria-label="Delete">
             Delete
