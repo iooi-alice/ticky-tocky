@@ -1,5 +1,5 @@
-.edit-modal {
-  .edit-form {
+.modal-edit-column {
+  .form-edit {
     @include column-flexbox(start, $gap: 1.6rem);
 
     .button-group {
