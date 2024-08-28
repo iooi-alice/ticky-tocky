@@ -1,0 +1,51 @@
+.modal-create-card {
+  min-width: 48rem;
+  background-color: $gray90;
+
+  .form-create-card {
+    .form-field {
+      @include flexbox(start, start, 2.4rem);
+
+      margin-bottom: 2.4rem;
+
+      &-left {
+        width: 24rem;
+      }
+
+      &-right {
+        @include column-flexbox(start, start, 1.6rem);
+
+        width: 36rem;
+
+        .form-group {
+          @include flexbox($gap: 0.8rem);
+
+          width: 100%;
+
+          .input-group {
+            width: 100%;
+
+            .input.disabled {
+              @include flexbox(start, $gap: 0.8rem);
+
+              background-color: $gray50;
+              border-color: $gray50;
+            }
+          }
+        }
+      }
+    }
+
+    .button-group {
+      @include flexbox($gap: 0.8rem);
+
+      width: 30%;
+      margin-left: auto;
+
+      button {
+        flex-shrink: 0;
+        width: 50%;
+      }
+    }
+  }
+}
