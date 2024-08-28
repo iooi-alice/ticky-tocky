@@ -13,7 +13,7 @@
   @include truncate;
 }
 
-.additional-tags {
+.additional-counts {
   @include inline-flexbox;
   @include text-style(12, $gray30);
 
