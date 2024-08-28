@@ -5,11 +5,15 @@ const overlay = document.querySelector('.overlay');
 
 function openInviteModal() {
   inviteModal.showModal();
+  inviteModal.classList.add('is-open');
+
   overlay.style.display = 'block';
 }
 
 function closeInviteModal() {
+  inviteModal.classList.remove('is-open');
   inviteModal.close();
+
   overlay.style.display = 'none';
 }
 
