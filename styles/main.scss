@@ -17,18 +17,19 @@
 @import './mixins/text-style';
 @import './mixins/truncate';
 
-@import './components/modal-base';
-@import './components/icon-button';
-@import './components/avatar';
+@import './modules/avatar';
+@import './modules/button';
+@import './modules/icon-button';
+@import './modules/input-group';
+@import './modules/modal-popup-base';
+@import './modules/tags';
+
 @import './components/breadcrumb';
 @import './components/invite-members';
 @import './components/task-column';
 @import './components/task-column-empty';
 @import './components/task-card';
-@import './components/options';
-@import './components/tags';
-@import './components/button';
-@import './components/input-group';
+@import './components/column-options';
 @import './components/profile-modal';
 @import './components/invitations-modal';
 @import './components/invite-member-modal';

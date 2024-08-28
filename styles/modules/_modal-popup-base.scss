@@ -1,6 +1,5 @@
-%modal-base {
+%modal-popup-base {
   position: absolute;
-  z-index: $modal-level;
 
   background-color: $gray90;
   border: 0.1rem solid $gray70;
@@ -10,14 +9,31 @@
 }
 
 .modal {
-  @extend %modal-base;
+  @extend %modal-popup-base;
 
+  z-index: $modal-level;
   box-shadow: $modal-shadow;
 
   &-header {
     @include flexbox(between);
 
     padding: 2rem 2rem 0;
+
+    h2 {
+      @include text-style(18, $gray10);
+    }
+  }
+}
+
+.popup {
+  @extend %modal-popup-base;
+
+  z-index: $modal-dropdown-level;
+  padding: 2rem;
+  box-shadow: $dropdown-shadow;
+
+  &-header {
+    @include flexbox(start, $gap: 0.8rem);
 
     h2 {
       @include text-style(18, $gray10);
