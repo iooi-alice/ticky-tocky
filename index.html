@@ -16,7 +16,7 @@
           </button>
         </div>
         <ul class="gnb-menu-list">
-          <li class="gnb-menu-item">
+          <li class="gnb-menu-item is-home">
             <a href="#viod" aria-label="Home">
               <img src="./assets/svg/ic-dashboard-default.svg" alt="Home icon" />
             </a>
@@ -73,21 +73,112 @@
           </h1>
 
           <nav class="board-header-nav">
-            <a class="btn-36 icon-btn-outline" href="#void" aria-label="go to Home">
+            <a class="icon-btn-outline icon-btn-36" href="#void" aria-label="go to Home">
               <img src="./assets/svg/ic-home.svg" alt="Home" />
             </a>
-            <button class="alarm-button btn-36 icon-btn-outline" type="button" aria-label="Notifications">
-              <img src="./assets/svg/ic-email.svg" alt="Invitation icon" />
-            </button>
-            <button class="profile" type="button" aria-label="Profile">
-              <div class="profile-image avatar-36">
-                <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
-              </div>
-              <div class="profile-info sm-hidden">
-                <span class="username">Alice</span>
-                <img src="./assets/svg/ic-profile-arrow-down.svg" alt="Arrow down icon" />
-              </div>
-            </button>
+
+            <div class="invitations">
+              <button class="icon-btn-outline icon-btn-36" type="button" aria-label="Notifications">
+                <img src="./assets/svg/ic-email.svg" alt="Invitation icon" />
+              </button>
+
+              <aside class="invitations-modal">
+                <header class="invitations-modal-header">
+                  <h2>Invitations</h2>
+                  <span class="additional-counts">3</span>
+                </header>
+
+                <div class="invitations-modal-search">
+                  <img src="./assets/svg/ic-search.svg" alt="Search icon" />
+                  <input type="text" placeholder="Enter board name to search" />
+                </div>
+
+                <ul class="invitation-list">
+                  <li class="invitation-item">
+                    <div class="invitation-details">
+                      <div class="invitation-details-header">
+                        <span>Username</span>
+                        <span>Board Name</span>
+                      </div>
+                      <div class="invitation-details-content">
+                        <span>tickytocky</span>
+                        <span>Javascript Study</span>
+                      </div>
+                    </div>
+
+                    <div class="button-group">
+                      <button class="btn-secondary btn-36" type="button" aria-label="Accept">Accept</button>
+                      <button class="btn-outline btn-36" type="button" aria-label="Deny">Deny</button>
+                    </div>
+                  </li>
+                  <li class="invitation-item">
+                    <div class="invitation-details">
+                      <div class="invitation-details-header">
+                        <span>Username</span>
+                        <span>Board Name</span>
+                      </div>
+                      <div class="invitation-details-content">
+                        <span>aleyna</span>
+                        <span>JS Study</span>
+                      </div>
+                    </div>
+
+                    <div class="button-group">
+                      <button class="btn-secondary btn-36" type="button" aria-label="Accept">Accept</button>
+                      <button class="btn-outline btn-36" type="button" aria-label="Deny">Deny</button>
+                    </div>
+                  </li>
+                  <li class="invitation-item">
+                    <div class="invitation-details">
+                      <div class="invitation-details-header">
+                        <span>Username</span>
+                        <span>Board Name</span>
+                      </div>
+                      <div class="invitation-details-content">
+                        <span>aleyna</span>
+                        <span>JS Study</span>
+                      </div>
+                    </div>
+
+                    <div class="button-group">
+                      <button class="btn-secondary btn-36" type="button" aria-label="Accept">Accept</button>
+                      <button class="btn-outline btn-36" type="button" aria-label="Deny">Deny</button>
+                    </div>
+                  </li>
+                </ul>
+              </aside>
+            </div>
+
+            <div class="profile">
+              <button class="profile-button" type="button" aria-label="Profile">
+                <div class="profile-button-image avatar-36">
+                  <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
+                </div>
+
+                <div class="profile-button-info sm-hidden">
+                  <span class="username">Alice</span>
+                  <img src="./assets/svg/ic-profile-arrow-down.svg" alt="Arrow down icon" />
+                </div>
+              </button>
+
+              <aside class="profile-modal">
+                <h2 class="visually-hidden">Profile Modal</h2>
+                <div class="profile-user-content">
+                  <div class="avatar-56">
+                    <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
+                  </div>
+                  <div class="profile-user-info">
+                    <span class="user-name">Alice</span>
+                    <span class="user-email">iooi_alice.github.com</span>
+                  </div>
+                </div>
+
+                <div class="button-group">
+                  <button class="btn-outline btn-44" type="button" aria-label="Mypage">Mypage</button>
+                  <button class="btn-tertiaty btn-44" type="button" aria-label="Logout">Logout</button>
+                </div>
+              </aside>
+            </div>
           </nav>
         </header>
 
@@ -95,7 +186,7 @@
           <header class="board-content-header">
             <div class="header-title">
               <h2>React Study</h2>
-              <a class="btn-24 icon-btn" href="#viod" aria-label="Settings">
+              <a class="icon-btn-ghost icon-btn-24" href="#viod" aria-label="Settings">
                 <img src="./assets/svg/ic-settings.svg" alt="Setting" />
               </a>
             </div>
@@ -119,7 +210,7 @@
                   </ul>
                   <div class="additional-members">+2</div>
                 </div>
-                <button type="button" aria-label="Invite member">
+                <button class="invite-button" type="button" aria-label="Invite member">
                   <img src="./assets/svg/ic-add.svg" alt="add icon" />
                   Invite
                 </button>
@@ -147,7 +238,7 @@
                   </div>
 
                   <div class="task-column-options">
-                    <button class="icon-btn-outline btn-32" type="button" aria-label="Kebab">
+                    <button class="icon-btn-outline icon-btn-32" type="button" aria-label="Kebab">
                       <img src="./assets/svg/ic-kebab.svg" alt="Kebab icon" />
                     </button>
                     <div class="task-options-wrapper">
@@ -167,7 +258,7 @@
                   <li class="task-card-item">
                     <article class="task-card">
                       <div class="task-card-thumbnail">
-                        <img src="./assets/images/card-thumbnail-stylelint.webp" alt="Card thumbnail" />
+                        <img src="./assets/images/card-thumbnail-stylelint.jpg" alt="Card thumbnail" />
                       </div>
 
                       <div class="task-card-content">
@@ -200,7 +291,6 @@
                     </article>
                   </li>
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-thumbnail">
                         <img src="./assets/images/card-thumbnail-userflow.webp" alt="Card thumbnail" />
@@ -252,7 +342,7 @@
                   </div>
 
                   <div class="task-column-options">
-                    <button class="icon-btn-outline btn-32" type="button" aria-label="Kebab">
+                    <button class="icon-btn-outline icon-btn-32" type="button" aria-label="Kebab">
                       <img src="./assets/svg/ic-kebab.svg" alt="Kebab icon" />
                     </button>
                     <div class="task-options-wrapper">
@@ -323,7 +413,7 @@
                               <div class="tag">21:00</div>
                             </li>
                             <li>
-                              <div class="additional-tags">+1</div>
+                              <div class="additional-counts">+1</div>
                             </li>
                           </ol>
                         </div>
@@ -387,7 +477,7 @@
                               <div class="tag">Mixins</div>
                             </li>
                             <li>
-                              <div class="additional-tags">+1</div>
+                              <div class="additional-counts">+1</div>
                             </li>
                           </ol>
                         </div>
@@ -424,7 +514,7 @@
                   </div>
 
                   <div class="task-column-options">
-                    <button class="icon-btn-outline btn-32" type="button" aria-label="Kebab">
+                    <button class="icon-btn-outline icon-btn-32" type="button" aria-label="Kebab">
                       <img src="./assets/svg/ic-kebab.svg" alt="Kebab icon" />
                     </button>
                     <div class="task-options-wrapper">
@@ -463,7 +553,7 @@
                               <div class="tag">getValue</div>
                             </li>
                             <li>
-                              <div class="additional-tags">+1</div>
+                              <div class="additional-counts">+1</div>
                             </li>
                           </ol>
                         </div>
@@ -552,20 +642,43 @@
               </article>
             </li>
             <li class="task-column-item">
-              <article class="task-column-empty">
-                <div>
-                  <img src="./assets/svg/ic-add-gray.svg" alt="Add icon" />
-                  Add Column
-                </div>
-              </article>
+              <button class="task-column-empty" type="button" aria-label="Add column">
+                <img src="./assets/svg/ic-add-gray.svg" alt="Add icon" />
+                <span>Add Column</span>
+              </button>
             </li>
           </ol>
         </main>
       </div>
     </div>
 
+    <div class="overlay"></div>
+
+    <dialog class="modal invite-modal" id="invite-modal">
+      <header class="modal-header">
+        <h2>Invite members</h2>
+      </header>
+      <form class="invite-form">
+        <div class="input-group">
+          <label class="label" for="email">Email</label>
+          <input class="input" type="text" name="email" id="email" />
+        </div>
+        <div class="button-group">
+          <button class="cancel-button btn-outline btn-36" type="button" aria-label="Cancel">Cancel</button>
+          <button class="submit-button btn-secondary btn-36" type="button" aria-label="Invite">Invite</button>
+        </div>
+      </form>
+    </dialog>
+    <!-- Add Task Modal -->
+
+    <!-- Invite members Modal -->
+    <!-- Edit Column Modal -->
+    <!-- Add Column Modal -->
+
     <script src="./js/gnb.js"></script>
     <script src="./js/profile.js"></script>
-    <script src="./js/options.js"></script>
+    <script src="./js/column-options.js"></script>
+    <script src="./js/invitations.js"></script>
+    <script src="./js/invite-member.js"></script>
   </body>
 </html>
