@@ -42,28 +42,6 @@
 
       margin-bottom: 0.8rem;
     }
-
-    .task-card-tag {
-      &-list {
-        @include flexbox(start, $gap: 0.6rem);
-      }
-
-      &-item:first-child {
-        color: $purple;
-      }
-
-      &-item:nth-child(2) {
-        color: $blue;
-      }
-
-      &-item:nth-child(3) {
-        color: $skyblue;
-      }
-
-      &-item:nth-child(4) {
-        color: $yellow;
-      }
-    }
   }
 
   &-meta {

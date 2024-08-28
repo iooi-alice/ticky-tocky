@@ -1,29 +1,83 @@
-.tag {
-  @include text-style(12);
+.tag-group {
+  @include flexbox(start, $gap: 0.8rem);
 
-  max-width: 6.4rem;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  input {
+    @include text-style(14, $gray10);
+
+    flex: 1 1;
+    width: 100%;
+    min-width: 46%;
+    white-space: nowrap;
+
+    &::placeholder {
+      color: $gray40;
+    }
+  }
+}
+
+.tag-list {
+  @include inline-flexbox(end, $gap: 0.8rem);
+
+  overflow: scroll;
+  flex-wrap: nowrap;
+  max-width: 100%;
+
+  @include no-scrollbar;
+
+  li:nth-child(5n + 1) {
+    color: $purple;
+  }
+
+  li:nth-child(5n + 2) {
+    color: $blue;
+  }
+
+  li:nth-child(5n + 3) {
+    color: $skyblue;
+  }
+
+  li:nth-child(5n + 4) {
+    color: $yellow;
+  }
+
+  li:nth-child(5n + 5) {
+    color: $orange;
+  }
+}
+
+%tag-base {
   height: 2.2rem;
   padding: 0 0.8rem;
 
-  line-height: 2.2rem;
+  white-space: nowrap;
 
   background-color: $opacity-white-5;
   border-radius: 0.4rem;
+}
+
+.tag {
+  @extend %tag-base;
+
+  @include text-style(12);
+
+  max-width: 6.4rem;
+  line-height: 2.2rem;
 
   @include truncate;
 }
 
-.additional-counts {
-  @include inline-flexbox;
-  @include text-style(12, $gray30);
+.tag-add {
+  @extend %tag-base;
 
-  width: 2.2rem;
-  height: 2.2rem;
-  background-color: $gray80;
-  border-radius: 0.4rem;
+  @include flexbox(start, $gap: 0.6rem);
+  @include text-style(14);
 }
 
-.column-title-tag {
+.tag-column-name {
   @include inline-flexbox;
   @include text-style(14, $primary);
 
