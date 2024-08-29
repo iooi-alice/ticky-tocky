@@ -82,3 +82,9 @@
 
   height: 3.6rem;
 }
+
+.btn-28 {
+  @include text-style(12);
+
+  height: 2.8rem;
+}
