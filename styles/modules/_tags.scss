@@ -1,21 +1,44 @@
+%tag-base {
+  height: 2.2rem;
+  padding: 0 0.8rem;
+
+  white-space: nowrap;
+
+  background-color: $opacity-white-5;
+  border-radius: 0.4rem;
+}
+
 .tag-group {
   @include flexbox(start, $gap: 0.8rem);
 
   overflow: hidden;
   flex-wrap: nowrap;
+
   width: 100%;
+
+  border: 0.1rem solid transparent;
+
+  transition: $base-transition;
 
   input {
     @include text-style(14, $gray10);
 
     flex: 1 1;
+
     width: 100%;
     min-width: 46%;
+
     white-space: nowrap;
+
+    transition: $base-transition;
 
     &::placeholder {
       color: $gray40;
     }
+  }
+
+  &.is-active {
+    border-color: $primary;
   }
 }
 
@@ -49,25 +72,18 @@
   }
 }
 
-%tag-base {
-  height: 2.2rem;
-  padding: 0 0.8rem;
-
-  white-space: nowrap;
-
-  background-color: $opacity-white-5;
-  border-radius: 0.4rem;
-}
-
 .tag {
   @extend %tag-base;
 
   @include text-style(12);
 
-  max-width: 6.4rem;
   line-height: 2.2rem;
 
-  @include truncate;
+  &.is-truncate {
+    @include truncate;
+
+    max-width: 6.4rem;
+  }
 }
 
 .tag-add {
@@ -84,4 +100,12 @@
   padding: 0 0.8rem;
   background-color: $opacity-white-5;
   border-radius: 0.4rem;
+}
+
+.tag-update {
+  @extend %tag-base;
+
+  @include text-style(12, $primary);
+
+  line-height: 2.2rem;
 }
