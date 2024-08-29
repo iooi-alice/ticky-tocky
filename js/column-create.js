@@ -1,24 +1,16 @@
+import { openModal, closeModal } from '../js/modal.js';
+
 const columnCreateButton = document.querySelector('.task-column-empty');
 const columnCreateModal = document.getElementById('create-modal');
 const columnCreateModalCloseButton = columnCreateModal.querySelector('.cancel-button');
-
-function openColumnCreateModal() {
-  columnCreateModal.showModal();
-  columnCreateModal.classList.add('is-open');
-
-  overlay.style.display = 'block';
-}
 
 function closeColumnCreateModal() {
   const inputElement = columnCreateModal.querySelector('.input');
   inputElement.value = '';
 
-  columnCreateModal.classList.remove('is-open');
-  columnCreateModal.close();
-
-  overlay.style.display = 'none';
+  closeModal(columnCreateModal);
 }
 
-columnCreateButton.addEventListener('click', openColumnCreateModal);
+columnCreateButton.addEventListener('click', () => openModal(columnCreateModal));
 columnCreateModalCloseButton.addEventListener('click', closeColumnCreateModal);
 columnCreateModal.addEventListener('close', closeColumnCreateModal);

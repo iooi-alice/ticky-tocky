@@ -1,3 +1,5 @@
+import { openModal, closeModal } from '../js/modal.js';
+
 const cardCreateButtons = document.querySelectorAll('.task-column .task-column-footer button');
 const cardCreateModal = document.getElementById('modal-create-card');
 const cardCreateModalCloseButton = cardCreateModal.querySelector('.cancel-button');
@@ -11,19 +13,11 @@ const tagGroup = cardCreateModal.querySelector('.tag-group');
 const [tagList, tagInput] = tagGroup.children;
 
 // 모달 열기, 닫기
-function openCardCreateModal() {
-  cardCreateModal.showModal();
-  cardCreateModal.classList.add('is-open');
-  overlay.style.display = 'block';
-}
-
 function closeCardCreateModal() {
   const inputElements = cardCreateModal.querySelectorAll('input');
   const textarea = cardCreateModal.querySelector('textarea');
 
-  cardCreateModal.close();
-  cardCreateModal.classList.remove('is-open');
-  overlay.style.display = 'none';
+  closeModal(cardCreateModal);
 
   inputElements.forEach((input) => (input.value = ''));
   textarea.value = '';
@@ -32,7 +26,7 @@ function closeCardCreateModal() {
 }
 
 cardCreateButtons.forEach((button) => {
-  button.addEventListener('click', openCardCreateModal);
+  button.addEventListener('click', () => openModal(cardCreateModal));
 });
 cardCreateModalCloseButton.addEventListener('click', closeCardCreateModal);
 cardCreateModal.addEventListener('close', closeCardCreateModal);
@@ -100,3 +94,5 @@ function preventEnterKey(e) {
 }
 
 tagInput.addEventListener('keydown', preventEnterKey);
+tagInput.addEventListener('focus', () => tagGroup.classList.add('is-active'));
+tagInput.addEventListener('blur', () => tagGroup.classList.remove('is-active'));

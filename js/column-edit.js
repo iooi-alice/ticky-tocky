@@ -1,3 +1,5 @@
+import { openModal, closeModal } from '../js/modal.js';
+
 const columnEditButtons = document.querySelectorAll('.task-options-wrapper .edit-button');
 const columnEditModal = document.getElementById('edit-modal');
 const columnEditModalCloseButton = columnEditModal.querySelector('.cancel-button');
@@ -10,10 +12,7 @@ function openColumnEditModal() {
   kebabButton.classList.remove('is-active');
   options.classList.remove('is-active');
 
-  columnEditModal.showModal();
-  columnEditModal.classList.add('is-open');
-
-  overlay.style.display = 'block';
+  openModal(columnEditModal);
 
   const headerElement = this.closest('.task-column-header');
   const columnTitle = headerElement.querySelector('.task-column-title').innerHTML;
@@ -23,10 +22,7 @@ function openColumnEditModal() {
 function closeColumnEditModal() {
   inputElement.value = '';
 
-  columnEditModal.classList.remove('is-open');
-  columnEditModal.close();
-
-  overlay.style.display = 'none';
+  closeModal(columnEditModal);
 }
 
 columnEditButtons.forEach((button) => {
