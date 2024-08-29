@@ -1,0 +1,25 @@
+.comment {
+  @include flexbox(start, start, 0.8rem);
+
+  &-content {
+    &-header {
+      margin-bottom: 0.4rem;
+
+      .author {
+        @include text-style(16, $gray20);
+      }
+
+      .time {
+        @include text-style(12, $gray30);
+      }
+
+      @include flexbox(start, $gap: 0.8rem);
+    }
+
+    p {
+      @include text-style(14, $gray10);
+
+      line-height: 1.8rem;
+    }
+  }
+}
