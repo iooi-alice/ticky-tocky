@@ -29,6 +29,12 @@
     background-color: $gray70;
     border: 0.1rem solid $gray60;
     border-radius: 0.6rem;
+
+    transition: $base-transition;
+
+    &.is-active {
+      border-color: $primary;
+    }
   }
 
   input[type='date']::-webkit-calendar-picker-indicator {
