@@ -436,6 +436,7 @@ input:autofill:active {
 /* stylelint-disable scss/no-global-function-names */
 .avatar-24, .avatar-36, .avatar-56 {
   overflow: hidden;
+  flex-shrink: 0;
   border-radius: 50%;
 }
 .avatar-24 img, .avatar-36 img, .avatar-56 img {
@@ -529,6 +530,13 @@ input:autofill:active {
   height: 3.6rem;
 }
 
+.btn-28 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  height: 2.8rem;
+}
+
 .icon-btn-outline, .icon-btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -592,9 +600,13 @@ input:autofill:active {
   background-color: #24252d;
   border: 0.1rem solid #272931;
   border-radius: 0.6rem;
+  transition: all ease-in-out 0.2s;
 }
 .input-group .input::placeholder {
   color: #474a5b;
+}
+.input-group .input:focus {
+  border-color: #37e8b4;
 }
 
 .textarea {
@@ -609,9 +621,13 @@ input:autofill:active {
   background-color: #24252d;
   border: 0.1rem solid #272931;
   border-radius: 0.6rem;
+  transition: all ease-in-out 0.2s;
 }
 .textarea::placeholder {
   color: #474a5b;
+}
+.textarea:focus {
+  border-color: #37e8b4;
 }
 
 .popup, .modal {
@@ -672,6 +688,14 @@ input:autofill:active {
   color: #e0e0e0;
 }
 
+.tag-update, .tag-add, .tag {
+  height: 2.2rem;
+  padding: 0 0.8rem;
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.4rem;
+}
+
 .tag-group {
   display: flex;
   align-items: center;
@@ -680,6 +704,8 @@ input:autofill:active {
   overflow: hidden;
   flex-wrap: nowrap;
   width: 100%;
+  border: 0.1rem solid transparent;
+  transition: all ease-in-out 0.2s;
 }
 .tag-group input {
   font-size: 1.4rem;
@@ -690,9 +716,13 @@ input:autofill:active {
   width: 100%;
   min-width: 46%;
   white-space: nowrap;
+  transition: all ease-in-out 0.2s;
 }
 .tag-group input::placeholder {
   color: #474a5b;
+}
+.tag-group.is-active {
+  border-color: #37e8b4;
 }
 
 .tag-list {
@@ -723,23 +753,17 @@ input:autofill:active {
   color: #ff862e;
 }
 
-.tag-add, .tag {
-  height: 2.2rem;
-  padding: 0 0.8rem;
-  white-space: nowrap;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 0.4rem;
-}
-
 .tag {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.4rem;
-  max-width: 6.4rem;
   line-height: 2.2rem;
+}
+.tag.is-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 6.4rem;
 }
 
 .tag-add {
@@ -763,6 +787,14 @@ input:autofill:active {
   padding: 0 0.8rem;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0.4rem;
+}
+
+.tag-update {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: #37e8b4;
+  line-height: 2.2rem;
 }
 
 .image-field-label {
@@ -906,6 +938,10 @@ input:autofill:active {
   background-color: #24252d;
   border: 0.1rem solid #272931;
   border-radius: 0.6rem;
+  transition: all ease-in-out 0.2s;
+}
+.date-field input[type=date].is-active {
+  border-color: #37e8b4;
 }
 .date-field input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
@@ -1460,10 +1496,10 @@ input:autofill:active {
   width: 50%;
 }
 
-.detele-modal {
+.modal-delete {
   min-width: 30rem;
 }
-.detele-modal .delete-info {
+.modal-delete .delete-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1471,22 +1507,22 @@ input:autofill:active {
   gap: 0.4rem;
   margin-bottom: 2.4rem;
 }
-.detele-modal .delete-info-text {
+.modal-delete .delete-info-text {
   text-align: center;
 }
-.detele-modal .delete-info-text h2 {
+.modal-delete .delete-info-text h2 {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 2.4rem;
   color: #e0e0e0;
 }
-.detele-modal .delete-info-text span {
+.modal-delete .delete-info-text span {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2.2rem;
   color: #888ca7;
 }
-.detele-modal .button-group {
+.modal-delete .button-group {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1544,6 +1580,205 @@ input:autofill:active {
 .modal-create-card .form-create-card .button-group button {
   flex-shrink: 0;
   width: 50%;
+}
+
+.modal-detail {
+  background-color: #1a191f;
+}
+.modal-detail .modal-header-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+.modal-detail .content-detail-comment {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3.2rem;
+  width: 80rem;
+  height: 32rem;
+}
+.modal-detail .detail {
+  width: 50%;
+  height: 100%;
+}
+.modal-detail .detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  width: 100%;
+  margin-bottom: 1.6rem;
+  padding: 1.2rem 0;
+  background-color: #151419;
+  border-radius: 0.6rem;
+}
+.modal-detail .detail-header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.modal-detail .detail-header div span:first-child {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: #888ca7;
+}
+.modal-detail .detail-header div span:last-child {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: #e0e0e0;
+}
+.modal-detail .detail-tags-container {
+  margin-bottom: 1.6rem;
+}
+.modal-detail .detail-tags-container span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #e0e0e0;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.modal-detail .detail-description p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #888ca7;
+}
+.modal-detail .comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.6rem;
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.modal-detail .comments::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  left: -1.6rem;
+  display: block;
+  width: 0.1rem;
+  height: 100%;
+  background-color: #24252d;
+}
+.modal-detail .comments .comment-list {
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 1rem;
+}
+.modal-detail .comments .comment-list::-webkit-scrollbar {
+  width: 0.6rem;
+}
+.modal-detail .comments .comment-list::-webkit-scrollbar-thumb {
+  background-color: #474a5b;
+  border-radius: 1rem;
+}
+.modal-detail .comments .comment-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.modal-detail .comments .comment-list .comment-item {
+  margin-bottom: 1.6rem;
+}
+.modal-detail .button-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 2.4rem;
+}
+.modal-detail .button-group button {
+  width: 8.8rem;
+}
+
+.text-field {
+  width: 100%;
+  background-color: #24252d;
+  border: 0.1rem solid transparent;
+  border-radius: 0.6rem;
+  transition: all ease-in-out 0.2s;
+}
+.text-field-content {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #e0e0e0;
+  resize: none;
+  overflow-y: auto;
+  width: 100%;
+  height: 8rem;
+  padding: 0.8rem 1.6rem 0;
+}
+.text-field-content::-webkit-scrollbar {
+  width: 2rem;
+}
+.text-field-content::-webkit-scrollbar-thumb {
+  background-color: #474a5b;
+  border: 0.7rem solid #24252d;
+  border-radius: 1rem;
+}
+.text-field-content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.text-field-content::-webkit-scrollbar-button:vertical:start:decrement, .text-field-content::-webkit-scrollbar-button:vertical:start:increment {
+  display: block;
+  height: 0.4rem;
+}
+.text-field-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+}
+.text-field-footer .submit-button {
+  width: 8rem;
+}
+.text-field.is-active {
+  border-color: #37e8b4;
+}
+.text-field.is-error {
+  border-color: #f34642;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+.comment-content-header {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+.comment-content-header .author {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #888ca7;
+}
+.comment-content-header .time {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  color: #6a6d81;
+}
+.comment-content p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #e0e0e0;
+  line-height: 1.8rem;
 }
 
 .container {
