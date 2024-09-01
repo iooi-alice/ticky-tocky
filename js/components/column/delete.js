@@ -1,4 +1,4 @@
-import { openModal, closeModal } from '../js/modal.js';
+import { openModal, closeModal } from '../modal/modal.js';
 
 const columnDeleteButtons = document.querySelectorAll('.task-options-wrapper .delete-button');
 const deleteModal = document.getElementById('detele-modal');
