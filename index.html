@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TickyTocky</title>
     <link rel="stylesheet" href="./style.css" />
+    <script type="module" defer src="./js/main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -152,7 +153,7 @@
             <div class="profile">
               <button class="profile-button" type="button" aria-label="Profile">
                 <div class="profile-button-image avatar-36">
-                  <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
+                  <img src="./assets/images/profile-avatar-alice.jpg" alt="alice profile" />
                 </div>
 
                 <div class="profile-button-info sm-hidden">
@@ -165,7 +166,7 @@
                 <h2 class="visually-hidden">Profile Modal</h2>
                 <div class="profile-user-content">
                   <div class="avatar-56">
-                    <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
+                    <img src="./assets/images/profile-avatar-alice.jpg" alt="alice profile" />
                   </div>
                   <div class="profile-user-info">
                     <span class="user-name">Alice</span>
@@ -196,16 +197,16 @@
                 <div class="member-group">
                   <ul class="member-list">
                     <li class="member-item avatar-24">
-                      <img src="./assets/images/profile-avatar.jpg" alt="member" />
+                      <img src="./assets/images/profile-avatar-alice.jpg" alt="alice profile" />
                     </li>
                     <li class="member-item avatar-24">
-                      <img src="./assets/images/profile-avatar-2.jpg" alt="member" />
+                      <img src="./assets/images/profile-avatar-john.jpg" alt="john profile" />
                     </li>
                     <li class="member-item avatar-24">
-                      <img src="./assets/images/profile-avatar-3.jpg" alt="member" />
+                      <img src="./assets/images/profile-avatar-james.jpg" alt="james profile" />
                     </li>
                     <li class="member-item avatar-24">
-                      <img src="./assets/images/profile-avatar-4.jpg" alt="member" />
+                      <img src="./assets/images/profile-avatar-wiliam.jpg" alt="wiliam profile" />
                     </li>
                   </ul>
                   <div class="additional-members">+2</div>
@@ -284,7 +285,7 @@
                             2024.08.27 01:08
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar-3.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-james.jpg" alt="james profile" />
                           </div>
                         </div>
                       </div>
@@ -316,7 +317,7 @@
                             2024.08.27 01:07
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar-2.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-john.jpg" alt="john profile" />
                           </div>
                         </div>
                       </div>
@@ -385,7 +386,7 @@
                             2024.08.27 05:00
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-wiliam.jpg" alt="wiliam profile" />
                           </div>
                         </div>
                       </div>
@@ -424,7 +425,7 @@
                             2024.08.24 01:07
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar-4.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-alice.jpg" alt="alice profile" />
                           </div>
                         </div>
                       </div>
@@ -453,7 +454,7 @@
                             2024.08.21 12:35
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar-2.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-john.jpg" alt="john profile" />
                           </div>
                         </div>
                       </div>
@@ -488,7 +489,7 @@
                             2024.08.20 01:39
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar-3.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-james.jpg" alt="james profile" />
                           </div>
                         </div>
                       </div>
@@ -564,7 +565,7 @@
                             2024.08.27 00:40
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar-2.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-john.jpg" alt="john profile" />
                           </div>
                         </div>
                       </div>
@@ -593,7 +594,7 @@
                             2024.08.25 01:50
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-alice.jpg" alt="alice profile" />
                           </div>
                         </div>
                       </div>
@@ -625,7 +626,7 @@
                             2024.08.21 13:07
                           </div>
                           <div class="avatar-24">
-                            <img src="./assets/images/profile-avatar-4.jpg" alt="Author profile image" />
+                            <img src="./assets/images/profile-avatar-wiliam.jpg" alt="wiliam profile" />
                           </div>
                         </div>
                       </div>
@@ -782,9 +783,9 @@
                   <label class="label" id="author-label" for="author">Author</label>
                   <div class="input disabled">
                     <span class="avatar-24">
-                      <img src="./assets/images/profile-avatar.jpg" alt="Profile Image" />
+                      <img src="./assets/images/profile-avatar-alice.jpg" alt="alice profile" />
                     </span>
-                    <span>Alice</span>
+                    <span class="author">Alice</span>
                   </div>
                 </div>
               </div>
@@ -792,7 +793,7 @@
               <div class="input-group">
                 <label class="label" for="title">Title</label>
                 <input
-                  class="input"
+                  class="input card-title"
                   type="text"
                   name="title"
                   id="title"
@@ -805,7 +806,7 @@
               <div class="input-group">
                 <label class="label" for="description">Description</label>
                 <textarea
-                  class="textarea"
+                  class="textarea card-desc"
                   name="description"
                   id="description"
                   placeholder="Describe the schedule"
@@ -867,11 +868,11 @@
             <header class="detail-header">
               <div class="detail-header-author">
                 <span>Author</span>
-                <span>Alice</span>
+                <span class="author">Alice</span>
               </div>
               <div class="detail-header-deadline">
                 <span>Deadline</span>
-                <span>2024.08.24 01:07</span>
+                <span class="deadline">2024.08.24 01:07</span>
               </div>
             </header>
 
@@ -919,7 +920,7 @@
               <li class="comment-item">
                 <article class="comment">
                   <div class="avatar-24">
-                    <img src="./assets/images/profile-avatar-2.jpg" alt="Avatar" />
+                    <img src="./assets/images/profile-avatar-john.jpg" alt="john profile" />
                   </div>
 
                   <div class="comment-content">
@@ -934,7 +935,7 @@
               <li class="comment-item">
                 <article class="comment">
                   <div class="avatar-24">
-                    <img src="./assets/images/profile-avatar-3.jpg" alt="Avatar" />
+                    <img src="./assets/images/profile-avatar-james.jpg" alt="james profile" />
                   </div>
 
                   <div class="comment-content">
@@ -955,18 +956,5 @@
         </div>
       </div>
     </dialog>
-
-    <script src="./js/gnb.js"></script>
-    <script src="./js/profile.js"></script>
-    <script src="./js/column-options.js"></script>
-    <script src="./js/invitations.js"></script>
-    <script src="./js/date.js"></script>
-    <script type="module" src="./js/modal.js"></script>
-    <script type="module" src="./js/invite-member.js"></script>
-    <script type="module" src="./js/column-create.js"></script>
-    <script type="module" src="./js/column-edit.js"></script>
-    <script type="module" src="./js/column-delete.js"></script>
-    <script type="module" src="./js/card-create.js"></script>
-    <script type="module" src="./js/card-detail.js"></script>
   </body>
 </html>
