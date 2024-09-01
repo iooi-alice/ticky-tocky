@@ -35,6 +35,10 @@
     &.is-active {
       border-color: $primary;
     }
+
+    &.is-error {
+      border-color: $red;
+    }
   }
 
   input[type='date']::-webkit-calendar-picker-indicator {

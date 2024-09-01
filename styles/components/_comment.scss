@@ -1,6 +1,10 @@
 .comment {
   @include flexbox(start, start, 0.8rem);
 
+  .comment-list {
+    width: 50%;
+  }
+
   &-content {
     &-header {
       margin-bottom: 0.4rem;
@@ -20,6 +24,7 @@
       @include text-style(14, $gray10);
 
       line-height: 1.8rem;
+      word-break: break-all;
     }
   }
 }
