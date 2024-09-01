@@ -1,18 +1,19 @@
-import { openModal, closeModal } from '../js/modal.js';
+import { openModal, closeModal } from '../modal/modal.js';
+import { isInputFocus, isInputBlur } from '../input/inputFocusBlur.js';
 
 const cards = document.querySelectorAll('.task-card');
+
 const cardDetailModal = document.getElementById('modal-detail');
-const cardDetailModalCloseButton = cardDetailModal.querySelector('.cancel-button');
-
 const [modalColumnName, modalCardName] = cardDetailModal.querySelector('.modal-header-title').children;
-
+const detailDeadline = cardDetailModal.querySelector('.detail-header-deadline .deadline');
 const commentTextField = cardDetailModal.querySelector('.text-field');
-const commentTextarea = cardDetailModal.querySelector('.text-field-content');
+const commentTextarea = cardDetailModal.querySelector('.text-field textarea');
+const commentList = cardDetailModal.querySelector('.comment-list');
+const cardDetailModalCloseButton = cardDetailModal.querySelector('.cancel-button');
 const commentResetButton = cardDetailModal.querySelector('.reset-button');
 const commentSubmitButton = cardDetailModal.querySelector('.submit-button');
-const commentList = cardDetailModal.querySelector('.comment-list');
 
-function updateCommnet(columnName, cardName) {
+function updateHeaderTitle(columnName, cardName) {
   modalColumnName.innerHTML = columnName.innerHTML;
   modalCardName.innerHTML = cardName.innerHTML;
 }
@@ -20,9 +21,9 @@ function updateCommnet(columnName, cardName) {
 function createCommentElement(newComment) {
   const liElement = document.createElement('li');
   liElement.className = 'comment-item';
-  liElement.innerHTML = `  <article class="comment">
+  liElement.innerHTML = `<article class="comment">
   <div class="avatar-24">
-    <img src="./assets/images/profile-avatar.jpg" alt="Avatar" />
+    <img src="./assets/images/profile-avatar-alice.jpg" alt="Avatar" />
   </div>
 
   <div class="comment-content">
@@ -42,12 +43,15 @@ function handleCardClick() {
   const columnHeaderContent = this.closest('.task-column').querySelector('.task-column-header-content');
   const columnName = columnHeaderContent.querySelector('.task-column-title');
   const cardName = this.querySelector('.task-card-title');
+  const deadline = this.querySelector('.task-card-date').innerText;
 
-  updateCommnet(columnName, cardName);
+  detailDeadline.innerText = deadline;
+
+  updateHeaderTitle(columnName, cardName);
   openModal(cardDetailModal);
 }
 
-function onInputComment(e) {
+function onInputChange(e) {
   const comment = e.target.value;
 
   if (comment.length > 0) {
@@ -86,8 +90,9 @@ cards.forEach((card) => {
 cardDetailModalCloseButton.addEventListener('click', handleModalClose);
 cardDetailModal.addEventListener('close', handleModalClose);
 
-commentSubmitButton.addEventListener('click', handleCommentsSubmit);
+commentTextarea.addEventListener('input', onInputChange);
 commentResetButton.addEventListener('click', resetCommentTextarea);
-commentTextarea.addEventListener('focus', () => commentTextField.classList.add('is-active'));
-commentTextarea.addEventListener('blur', () => commentTextField.classList.remove('is-active'));
-commentTextarea.addEventListener('input', onInputComment);
+commentSubmitButton.addEventListener('click', handleCommentsSubmit);
+
+commentTextarea.addEventListener('focus', () => isInputFocus(commentTextField));
+commentTextarea.addEventListener('blur', () => isInputBlur(commentTextField));
