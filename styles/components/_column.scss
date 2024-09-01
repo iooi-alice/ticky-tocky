@@ -46,6 +46,7 @@
 
     .task-options-wrapper {
       position: absolute;
+      z-index: $modal-dropdown-level;
       top: 4rem;
       right: 0;
 
