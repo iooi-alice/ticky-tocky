@@ -608,6 +608,9 @@ input:autofill:active {
 .input-group .input:focus {
   border-color: #37e8b4;
 }
+.input-group .input.is-error {
+  border-color: #f34642;
+}
 
 .textarea {
   font-size: 1.4rem;
@@ -628,6 +631,10 @@ input:autofill:active {
 }
 .textarea:focus {
   border-color: #37e8b4;
+}
+
+.card-desc.is-error {
+  border-color: #f34642;
 }
 
 .popup, .modal {
@@ -943,6 +950,9 @@ input:autofill:active {
 .date-field input[type=date].is-active {
   border-color: #37e8b4;
 }
+.date-field input[type=date].is-error {
+  border-color: #f34642;
+}
 .date-field input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   position: absolute;
@@ -1003,8 +1013,9 @@ input:autofill:active {
   content: "";
   left: -1.6rem;
   display: block;
-  height: 2.4rem;
-  border: 0.01rem solid #272931;
+  width: 0.1rem;
+  height: 100%;
+  background-color: #24252d;
 }
 .breadcrumb a:first-child {
   display: flex;
@@ -1026,12 +1037,12 @@ input:autofill:active {
   width: 100%;
   padding: 1.6rem;
   background-color: #272931;
-  border: 1px solid transparent;
+  border: 0.1rem solid transparent;
   border-radius: 0.6rem;
   transition: all ease-in-out 0.2s;
 }
 .task-card:hover {
-  border: 1px solid #37e8b4;
+  border: 0.1rem solid #37e8b4;
 }
 .task-card-thumbnail {
   overflow: hidden;
@@ -1130,6 +1141,7 @@ input:autofill:active {
 }
 .task-column-options .task-options-wrapper {
   position: absolute;
+  z-index: 30;
   top: 4rem;
   right: 0;
   width: 12rem;
@@ -1265,8 +1277,9 @@ input:autofill:active {
   content: "";
   left: -0.6rem;
   display: block;
+  width: 0.1rem;
   height: 100%;
-  border: 0.01rem solid #272931;
+  background-color: #272931;
 }
 
 .overlay {
@@ -1754,6 +1767,9 @@ input:autofill:active {
   justify-content: flex-start;
   gap: 0.8rem;
 }
+.comment .comment-list {
+  width: 50%;
+}
 .comment-content-header {
   margin-bottom: 0.4rem;
   display: flex;
@@ -1779,6 +1795,7 @@ input:autofill:active {
   line-height: 2.2rem;
   color: #e0e0e0;
   line-height: 1.8rem;
+  word-break: break-all;
 }
 
 .container {
@@ -1840,7 +1857,8 @@ input:autofill:active {
   bottom: 0;
   display: block;
   width: 100%;
-  border: 0.1rem solid #24252d;
+  height: 0.1rem;
+  background-color: #24252d;
 }
 .gnb-menu-list {
   overflow-y: scroll;

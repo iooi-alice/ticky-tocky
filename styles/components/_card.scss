@@ -7,13 +7,13 @@
   padding: 1.6rem;
 
   background-color: $gray60;
-  border: 1px solid transparent;
+  border: 0.1rem solid transparent;
   border-radius: 0.6rem;
 
   transition: $base-transition;
 
   &:hover {
-    border: 1px solid $primary;
+    border: 0.1rem solid $primary;
   }
 
   &-thumbnail {
