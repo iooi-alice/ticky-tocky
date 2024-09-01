@@ -39,9 +39,10 @@
 
       display: block;
 
+      width: 0.1rem;
       height: 100%;
 
-      border: 0.01rem solid $gray60;
+      background-color: $gray60;
     }
   }
 }
