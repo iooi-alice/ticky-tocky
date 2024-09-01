@@ -1,12 +1,16 @@
-import { openModal, closeModal } from '../js/modal.js';
+import { openModal, closeModal } from '../modal/modal.js';
+import { inputValidation } from '../input/inputValidator.js';
 
 const columnCreateButton = document.querySelector('.task-column-empty');
+
 const columnCreateModal = document.getElementById('create-modal');
+const inputElement = columnCreateModal.querySelector('.input');
 const columnCreateModalCloseButton = columnCreateModal.querySelector('.cancel-button');
+const columnCreateModalSubmitButton = columnCreateModal.querySelector('.submit-button');
 
 function closeColumnCreateModal() {
-  const inputElement = columnCreateModal.querySelector('.input');
   inputElement.value = '';
+  inputElement.classList.remove('is-error');
 
   closeModal(columnCreateModal);
 }
@@ -14,3 +18,5 @@ function closeColumnCreateModal() {
 columnCreateButton.addEventListener('click', () => openModal(columnCreateModal));
 columnCreateModalCloseButton.addEventListener('click', closeColumnCreateModal);
 columnCreateModal.addEventListener('close', closeColumnCreateModal);
+
+inputValidation(inputElement, columnCreateModalSubmitButton);
