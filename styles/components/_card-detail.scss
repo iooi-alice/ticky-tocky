@@ -10,9 +10,15 @@
 
     width: 80rem;
     height: 32rem;
+
+    @include responsive(T) {
+      width: 68rem;
+    }
   }
 
   .detail {
+    @include column-flexbox(start, start);
+
     width: 50%;
     height: 100%;
 
@@ -40,6 +46,7 @@
     }
 
     &-tags-container {
+      width: 100%;
       margin-bottom: 1.6rem;
 
       span {
@@ -51,6 +58,21 @@
     }
 
     &-description {
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 0.6rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray40;
+        border-radius: 1rem;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
       p {
         @include text-style(14, $gray20);
       }
@@ -111,6 +133,57 @@
 
     button {
       width: 8.8rem;
+    }
+  }
+
+  @include responsive(M) {
+    width: 100%;
+    height: 100vh;
+
+    .modal-content {
+      @include column-flexbox(between, start, 1.6rem);
+
+      flex-grow: 1;
+      width: 100%;
+      height: calc(100% - 5.2rem);
+      padding: 1.6rem;
+    }
+
+    .detail-description {
+      overflow: visible;
+      height: 100%;
+    }
+
+    .content-detail-comment {
+      @include column-flexbox(start, start, 1.6rem);
+
+      overflow: auto;
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      width: 100%;
+      height: calc(100% - 5.2rem);
+
+      @include no-scrollbar;
+
+      .detail {
+        width: 100%;
+        height: auto;
+      }
+
+      .comments {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .button-group {
+      padding-top: 0;
+
+      button {
+        width: 100%;
+        height: 4.8rem;
+      }
     }
   }
 }

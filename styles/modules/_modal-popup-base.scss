@@ -16,6 +16,8 @@
   z-index: $modal-level;
   transform: translate(-50%, calc(-50% + 3rem));
 
+  overflow: hidden;
+
   min-width: 32.8rem;
 
   opacity: 0;
@@ -26,6 +28,7 @@
   &-header {
     @include flexbox(between);
 
+    width: 100%;
     padding: 2rem 2rem 0;
 
     h2 {
