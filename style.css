@@ -652,7 +652,7 @@ input:autofill:active {
   transform: translate(-50%, -50%);
   z-index: 200;
   transform: translate(-50%, calc(-50% + 3rem));
-  min-width: 36rem;
+  min-width: 32.8rem;
   opacity: 0;
   box-shadow: 0 16px 32px 0 rgba(5, 5, 5, 0.8);
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
