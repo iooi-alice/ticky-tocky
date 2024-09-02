@@ -1448,6 +1448,11 @@ input:autofill:active {
   gap: 0.8rem;
   width: 28rem;
 }
+@media screen and (max-width: 767px) {
+  .invitations-modal {
+    right: -5.2rem;
+  }
+}
 
 .modal-invite-members .form-invite {
   display: flex;
