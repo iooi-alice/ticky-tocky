@@ -1,4 +1,5 @@
 import './utils/createTagElement.js';
+import './utils/createColumnElement.js';
 import './components/input/inputFocusBlur.js';
 import './components/input/inputValidator.js';
 import './components/modal/modalOpenClose.js';
