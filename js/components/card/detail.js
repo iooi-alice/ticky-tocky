@@ -46,9 +46,10 @@ function handleCardClick() {
   const deadline = this.querySelector('.task-card-date').innerText;
 
   detailDeadline.innerText = deadline;
-
   updateHeaderTitle(columnName, cardName);
+
   openModal(cardDetailModal);
+  commentTextarea.blur();
 }
 
 function onInputChange(e) {

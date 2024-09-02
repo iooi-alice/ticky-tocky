@@ -12,6 +12,11 @@ const inviteModalSubmitButton = inviteModal.querySelector('.submit-button');
 
 const MOBILE_WIDTH = 767;
 
+function openInviteModal() {
+  openModal(inviteModal);
+  inputElement.blur();
+}
+
 function closeInviteModal() {
   inputElement.value = '';
   inputElement.classList.remove('is-error');
@@ -29,7 +34,7 @@ function handleResize() {
   }
 }
 
-inviteButton.addEventListener('click', () => openModal(inviteModal));
+inviteButton.addEventListener('click', openInviteModal);
 inviteModalCloseButton.addEventListener('click', closeInviteModal);
 inviteModal.addEventListener('close', closeInviteModal);
 window.addEventListener('resize', handleResize);

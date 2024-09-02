@@ -9,6 +9,11 @@ const inputElement = columnCreateModal.querySelector('.input');
 const columnCreateModalCloseButton = columnCreateModal.querySelector('.cancel-button');
 const columnCreateModalSubmitButton = columnCreateModal.querySelector('.submit-button');
 
+function openColumnCreateModal() {
+  openModal(columnCreateModal);
+  inputElement.blur();
+}
+
 function closeColumnCreateModal() {
   inputElement.value = '';
   inputElement.classList.remove('is-error');
@@ -29,7 +34,7 @@ function handleSubmit(e) {
   closeModal(columnCreateModal);
 }
 
-columnCreateButton.addEventListener('click', () => openModal(columnCreateModal));
+columnCreateButton.addEventListener('click', openColumnCreateModal);
 columnCreateModalCloseButton.addEventListener('click', closeColumnCreateModal);
 columnCreateModal.addEventListener('close', closeColumnCreateModal);
 columnCreateModalSubmitButton.addEventListener('click', handleSubmit);

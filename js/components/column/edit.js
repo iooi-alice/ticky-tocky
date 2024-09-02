@@ -18,6 +18,7 @@ function openColumnEditModal() {
   options.classList.remove('is-active');
 
   openModal(columnEditModal);
+  inputElement.blur();
 
   const headerElement = this.closest('.task-column-header');
   currentColumnTitleElement = headerElement.querySelector('.task-column-title');
