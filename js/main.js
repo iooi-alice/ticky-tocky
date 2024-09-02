@@ -10,6 +10,7 @@ import './components/column/create.js';
 import './components/column/delete.js';
 import './components/column/edit.js';
 import './components/column/option.js';
+import './components/column/toggleColumn.js';
 import './components/gnb/gnb.js';
 import './components/header/invitations.js';
 import './components/header/invite-member.js';
