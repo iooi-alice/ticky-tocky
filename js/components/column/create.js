@@ -1,4 +1,4 @@
-import { openModal, closeModal } from '../modal/modal.js';
+import { openModal, closeModal } from '../modal/modalOpenClose.js';
 import { inputValidation } from '../input/inputValidator.js';
 
 const columnCreateButton = document.querySelector('.task-column-empty');

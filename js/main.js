@@ -1,7 +1,7 @@
 import './utils/createTagElement.js';
 import './components/input/inputFocusBlur.js';
 import './components/input/inputValidator.js';
-import './components/modal/modal.js';
+import './components/modal/modalOpenClose.js';
 import './components/option/toggleOptions.js';
 import './components/card/create.js';
 import './components/card/detail.js';

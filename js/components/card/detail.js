@@ -1,4 +1,4 @@
-import { openModal, closeModal } from '../modal/modal.js';
+import { openModal, closeModal } from '../modal/modalOpenClose.js';
 import { isInputFocus, isInputBlur } from '../input/inputFocusBlur.js';
 
 const cards = document.querySelectorAll('.task-card');

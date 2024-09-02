@@ -1,7 +1,7 @@
 import { cardCreateModal, cardColumnNameTag, cardTitleInput, cardTextarea, dateInput, tagList } from './create.js';
 import { handleToggleOptions } from '../option/toggleOptions.js';
 import { createTagElement } from '../../utils/createTagElement.js';
-import { openModal, closeModal } from '../modal/modal.js';
+import { openModal, closeModal } from '../modal/modalOpenClose.js';
 
 const cardDetailModal = document.getElementById('modal-detail');
 const cardDetailAuthor = cardCreateModal.querySelector('.form-field-right .author');

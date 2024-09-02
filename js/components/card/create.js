@@ -1,4 +1,4 @@
-import { openModal, closeModal } from '../modal/modal.js';
+import { openModal, closeModal } from '../modal/modalOpenClose.js';
 import { isInputFocus, isInputBlur } from '../input/inputFocusBlur.js';
 import { inputValidation } from '../input/inputValidator.js';
 import { createTagElement } from '../../utils/createTagElement.js';
