@@ -384,7 +384,7 @@ textarea:focus {
 
 ul,
 ol {
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -1091,10 +1091,15 @@ input:autofill:active {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   background-color: #1e1f25;
   border-radius: 1.2rem;
+  transition: height 400ms linear;
+}
+.task-column.is-close {
+  height: 5.2rem;
 }
 .task-column-header {
   display: flex;
@@ -1166,6 +1171,11 @@ input:autofill:active {
 }
 .task-column .task-card-list::-webkit-scrollbar {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .task-column .task-card-list {
+    max-height: 36rem;
+  }
 }
 .task-column .task-card-item {
   width: 100%;
@@ -2074,9 +2084,13 @@ input:autofill:active {
   justify-content: stretch;
   gap: 2.4rem;
   overflow-y: auto;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding: 2.4rem;
+}
+.task-column-list::-webkit-scrollbar {
+  display: none;
 }
 .task-column-list::-webkit-scrollbar {
   height: 3rem;
@@ -2089,6 +2103,10 @@ input:autofill:active {
 .task-column-list::-webkit-scrollbar-track {
   background-color: transparent;
 }
+.task-column-list .task-column-item {
+  flex-shrink: 0;
+  width: 30rem;
+}
 @media screen and (max-width: 767px) {
   .task-column-list {
     display: flex;
@@ -2097,7 +2115,7 @@ input:autofill:active {
     justify-content: stretch;
     gap: 0.8rem;
     height: calc(100vh - 17.6rem);
-    padding: 0.8rem 0 1.6rem 1.6rem;
+    padding: 0.8rem 1.6rem 1.6rem;
   }
   .task-column-list .task-column-item {
     width: 100%;
@@ -2108,11 +2126,6 @@ input:autofill:active {
   .task-column-list .task-column-item:last-child button {
     height: 5.6rem;
   }
-}
-
-.task-column-item {
-  flex-shrink: 0;
-  width: 30rem;
 }
 
 /*# sourceMappingURL=style.css.map */

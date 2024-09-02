@@ -1,10 +1,19 @@
 .task-column {
   @include column-flexbox(between);
 
+  overflow: hidden;
+
   width: 100%;
   height: 100%;
+
   background-color: $gray80;
   border-radius: 1.2rem;
+
+  transition: height 400ms linear;
+
+  &.is-close {
+    height: 5.2rem;
+  }
 
   &-header {
     @include flexbox(between);
@@ -73,6 +82,10 @@
     padding: 0 1.6rem 1.6rem;
 
     @include no-scrollbar;
+
+    @include responsive(M) {
+      max-height: 36rem;
+    }
   }
 
   .task-card-item {
