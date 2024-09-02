@@ -10,6 +10,10 @@
 
     border-bottom: 0.1rem solid $gray70;
 
+    @include responsive(M) {
+      padding: 0 1.6rem;
+    }
+
     .logo {
       height: 2rem;
     }
