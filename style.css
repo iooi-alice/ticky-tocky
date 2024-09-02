@@ -1813,6 +1813,11 @@ input:autofill:active {
   width: calc(100% - 7.2rem);
   height: 100vh;
 }
+@media screen and (max-width: 767px) {
+  .board {
+    width: 100%;
+  }
+}
 .board-content {
   display: flex;
   flex-direction: column;
@@ -1910,6 +1915,53 @@ input:autofill:active {
 .gnb-logout {
   padding-top: 1.6rem;
 }
+.gnb-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 6.8rem;
+  padding-left: 1.6rem;
+  border-bottom: 0.1rem solid #24252d;
+}
+.gnb-mobile .gnb-add {
+  padding-bottom: 0;
+}
+.gnb-mobile .gnb-add button::after {
+  display: none;
+}
+.gnb-mobile .gnb-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+  overflow: auto;
+  padding: 0 1.6rem 0 2.4rem;
+}
+.gnb-mobile .gnb-menu-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.gnb-mobile .gnb-menu-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 1.2rem;
+  display: block;
+  width: 0.1rem;
+  height: 3.2rem;
+  background-color: #24252d;
+}
+.gnb-mobile .gnb-menu-list {
+  overflow-y: visible;
+  flex-direction: row;
+  height: 100%;
+  margin-top: 0;
+}
+.gnb-mobile .gnb-logout {
+  padding-top: 0;
+}
+
 .board-header {
   display: flex;
   align-items: center;
@@ -1919,6 +1971,11 @@ input:autofill:active {
   height: 6rem;
   padding: 0 3.2rem;
   border-bottom: 0.1rem solid #24252d;
+}
+@media screen and (max-width: 767px) {
+  .board-header {
+    padding: 0 1.6rem;
+  }
 }
 .board-header .logo {
   height: 2rem;
@@ -1980,6 +2037,12 @@ input:autofill:active {
   padding: 0 3.2rem;
   border-bottom: 0.1rem solid #24252d;
 }
+@media screen and (max-width: 767px) {
+  .board-content-header {
+    padding: 0 1.6rem;
+    border-bottom: 0;
+  }
+}
 .board-content-header .header-title {
   display: flex;
   align-items: center;
@@ -1991,6 +2054,7 @@ input:autofill:active {
   font-weight: 500;
   line-height: 2.4rem;
   color: #e0e0e0;
+  white-space: nowrap;
 }
 .board-content-header .header-controls {
   display: flex;
@@ -2019,6 +2083,26 @@ input:autofill:active {
 }
 .task-column-list::-webkit-scrollbar-track {
   background-color: transparent;
+}
+@media screen and (max-width: 767px) {
+  .task-column-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    gap: 0.8rem;
+    height: calc(100vh - 17.6rem);
+    padding: 0.8rem 0 1.6rem 1.6rem;
+  }
+  .task-column-list .task-column-item {
+    width: 100%;
+  }
+  .task-column-list .task-column-item:last-child {
+    order: -1;
+  }
+  .task-column-list .task-column-item:last-child button {
+    height: 5.6rem;
+  }
 }
 
 .task-column-item {
