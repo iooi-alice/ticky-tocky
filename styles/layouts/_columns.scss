@@ -8,8 +8,6 @@
   height: 100%;
   padding: 2.4rem;
 
-  @include no-scrollbar;
-
   &::-webkit-scrollbar {
     height: 3rem;
   }
@@ -30,10 +28,12 @@
   }
 
   @include responsive(M) {
-    @include column-flexbox(stretch, center, 0.8rem);
+    @include column-flexbox(stretch, center, 1.2rem);
 
     height: calc(100vh - 17.6rem);
     padding: 0.8rem 1.6rem 1.6rem;
+
+    @include no-scrollbar;
 
     .task-column-item {
       width: 100%;
