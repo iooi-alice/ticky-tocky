@@ -48,7 +48,7 @@
   </head>
   <body>
     <div class="container">
-      <nav class="gnb">
+      <nav class="gnb sm-hidden">
         <h1 class="visually-hidden">Navigation</h1>
         <div class="gnb-add">
           <button type="button" aria-label="Add new task">
@@ -222,6 +222,64 @@
           </nav>
         </header>
 
+        <nav class="gnb-mobile sm-only">
+          <h1 class="visually-hidden">Navigation</h1>
+          <div class="gnb-add">
+            <button type="button" aria-label="Add new task">
+              <img src="./assets/svg/ic-add-active.svg" alt="Add icon" />
+            </button>
+          </div>
+          <div class="gnb-menu-wrapper">
+            <ul class="gnb-menu-list">
+              <li class="gnb-menu-item is-home">
+                <a href="#viod" aria-label="Home">
+                  <img src="./assets/svg/ic-dashboard-default.svg" alt="Home icon" />
+                </a>
+              </li>
+              <li class="gnb-menu-item">
+                <a href="#viod" aria-label="Task item">
+                  <img src="./assets/images/menu-thumbnail-next.jpg" alt="Next.js" />
+                </a>
+              </li>
+              <li class="gnb-menu-item is-active">
+                <a href="#viod" aria-label="Task item">
+                  <img src="./assets/images/menu-thumbnail-react.jpg" alt="React.js" />
+                </a>
+              </li>
+              <li class="gnb-menu-item">
+                <a href="#viod" aria-label="Task item">
+                  <img src="./assets/images/menu-thumbnail-reactquery.jpg" alt="React-quert" />
+                </a>
+              </li>
+              <li class="gnb-menu-item">
+                <a href="#viod" aria-label="Task item">
+                  <img src="./assets/images/menu-thumbnail-ts.jpg" alt="Typescript" />
+                </a>
+              </li>
+              <li class="gnb-menu-item">
+                <a href="#viod" aria-label="Task item">
+                  <img src="./assets/images/menu-thumbnail-tailwind.jpg" alt="Tailwind" />
+                </a>
+              </li>
+              <li class="gnb-menu-item">
+                <a href="#viod" aria-label="Task item">
+                  <img src="./assets/images/menu-thumbnail-storybook.jpg" alt="Storybook" />
+                </a>
+              </li>
+              <li class="gnb-menu-item">
+                <a>
+                  <img src="./assets/images/menu-thumbnail-figma.jpg" alt="Figma" />
+                </a>
+              </li>
+            </ul>
+            <div class="gnb-logout">
+              <button type="button" aria-label="logout">
+                <img src="./assets/svg/ic-logout.svg" alt="logout icon" />
+              </button>
+            </div>
+          </div>
+        </nav>
+
         <main class="board-content">
           <header class="board-content-header">
             <div class="header-title">
@@ -238,13 +296,13 @@
                     <li class="member-item avatar-24">
                       <img src="./assets/images/profile-avatar-alice.jpg" alt="alice profile" />
                     </li>
-                    <li class="member-item avatar-24">
+                    <li class="member-item avatar-24 sm-hidden">
                       <img src="./assets/images/profile-avatar-john.jpg" alt="john profile" />
                     </li>
-                    <li class="member-item avatar-24">
+                    <li class="member-item avatar-24 sm-hidden">
                       <img src="./assets/images/profile-avatar-james.jpg" alt="james profile" />
                     </li>
-                    <li class="member-item avatar-24">
+                    <li class="member-item avatar-24 sm-hidden">
                       <img src="./assets/images/profile-avatar-wiliam.jpg" alt="wiliam profile" />
                     </li>
                   </ul>
@@ -269,7 +327,6 @@
 
           <ol class="task-column-list">
             <li class="task-column-item">
-              <!-- Column -->
               <article class="task-column">
                 <header class="task-column-header">
                   <div class="task-column-header-content">
@@ -373,7 +430,6 @@
               </article>
             </li>
             <li class="task-column-item">
-              <!-- Column -->
               <article class="task-column">
                 <header class="task-column-header">
                   <div class="task-column-header-content">
@@ -400,7 +456,6 @@
 
                 <ol class="task-card-list">
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-content">
                         <div class="task-card-title-tags">
@@ -432,7 +487,6 @@
                     </article>
                   </li>
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-thumbnail">
                         <img src="./assets/images/card-thumbnail-notion.webp" alt="Card thumbnail" />
@@ -471,7 +525,6 @@
                     </article>
                   </li>
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-content">
                         <div class="task-card-title-tags">
@@ -500,7 +553,6 @@
                     </article>
                   </li>
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-content">
                         <div class="task-card-title-tags">
@@ -545,7 +597,6 @@
               </article>
             </li>
             <li class="task-column-item">
-              <!-- Column -->
               <article class="task-column">
                 <header class="task-column-header">
                   <div class="task-column-header-content">
@@ -572,7 +623,6 @@
 
                 <ol class="task-card-list">
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-thumbnail">
                         <img src="./assets/images/card-thumbnail-hookform.webp" alt="Card thumbnail" />
@@ -611,7 +661,6 @@
                     </article>
                   </li>
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-content">
                         <div class="task-card-title-tags">
@@ -640,7 +689,6 @@
                     </article>
                   </li>
                   <li class="task-card-item">
-                    <!-- Card -->
                     <article class="task-card">
                       <div class="task-card-content">
                         <div class="task-card-title-tags">
