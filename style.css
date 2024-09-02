@@ -1827,6 +1827,24 @@ input:autofill:active {
   word-break: break-all;
 }
 
+.task-card-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 12.8rem;
+  background-color: #272931;
+  border-radius: 0.6rem;
+}
+.task-card-empty span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #6a6d81;
+  font-weight: 600;
+}
+
 .container {
   display: flex;
   align-items: flex-start;
