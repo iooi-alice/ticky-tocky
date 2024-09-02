@@ -9,11 +9,18 @@
 
   border-bottom: 0.1rem solid $gray70;
 
+  @include responsive(M) {
+    padding: 0 1.6rem;
+    border-bottom: 0;
+  }
+
   .header-title {
     @include flexbox($gap: 0.4rem);
 
     h2 {
       @include text-style(18, $gray10);
+
+      white-space: nowrap;
     }
   }
 
