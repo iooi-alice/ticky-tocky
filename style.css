@@ -384,7 +384,7 @@ textarea:focus {
 
 ul,
 ol {
-  padding: 0;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -1096,10 +1096,15 @@ input:autofill:active {
   height: 100%;
   background-color: #1e1f25;
   border-radius: 1.2rem;
-  transition: height 400ms linear;
+  transition: height 300ms linear;
+}
+@media screen and (max-width: 767px) {
+  .task-column {
+    height: 47.2rem;
+  }
 }
 .task-column.is-close {
-  height: 5.2rem;
+  height: 5.6rem;
 }
 .task-column-header {
   display: flex;
@@ -1109,12 +1114,15 @@ input:autofill:active {
   width: 100%;
   height: 5.6rem;
   padding: 0 1.6rem;
+  background-color: #1e1f25;
 }
 .task-column-header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.8rem;
+  width: 100%;
+  height: 100%;
 }
 .task-column-header-content .task-column-title {
   font-size: 1.6rem;
@@ -1137,12 +1145,18 @@ input:autofill:active {
 }
 .task-column-options {
   position: relative;
+  visibility: visible;
+  opacity: 1;
 }
 .task-column-options button {
   transition: all ease-in-out 0.2s;
 }
 .task-column-options button.is-active {
   border-color: #37e8b4;
+}
+.task-column-options.is-empty {
+  visibility: hidden;
+  opacity: 0;
 }
 .task-column-options .task-options-wrapper {
   position: absolute;
@@ -2090,9 +2104,6 @@ input:autofill:active {
   padding: 2.4rem;
 }
 .task-column-list::-webkit-scrollbar {
-  display: none;
-}
-.task-column-list::-webkit-scrollbar {
   height: 3rem;
 }
 .task-column-list::-webkit-scrollbar-thumb {
@@ -2113,9 +2124,12 @@ input:autofill:active {
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
-    gap: 0.8rem;
+    gap: 1.2rem;
     height: calc(100vh - 17.6rem);
     padding: 0.8rem 1.6rem 1.6rem;
+  }
+  .task-column-list::-webkit-scrollbar {
+    display: none;
   }
   .task-column-list .task-column-item {
     width: 100%;

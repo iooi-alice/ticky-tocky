@@ -9,22 +9,32 @@
   background-color: $gray80;
   border-radius: 1.2rem;
 
-  transition: height 400ms linear;
+  transition: height 300ms linear;
+
+  @include responsive(M) {
+    height: 47.2rem;
+  }
 
   &.is-close {
-    height: 5.2rem;
+    height: 5.6rem;
   }
 
   &-header {
     @include flexbox(between);
 
     flex-shrink: 0;
+
     width: 100%;
     height: 5.6rem;
     padding: 0 1.6rem;
 
+    background-color: $gray80;
+
     &-content {
-      @include flexbox($gap: 0.8rem);
+      @include flexbox(start, $gap: 0.8rem);
+
+      width: 100%;
+      height: 100%;
 
       .task-column-title {
         @include text-style(16, $gray10);
@@ -44,6 +54,8 @@
 
   &-options {
     position: relative;
+    visibility: visible;
+    opacity: 1;
 
     button {
       transition: $base-transition;
@@ -51,6 +63,11 @@
       &.is-active {
         border-color: $primary;
       }
+    }
+
+    &.is-empty {
+      visibility: hidden;
+      opacity: 0;
     }
 
     .task-options-wrapper {
