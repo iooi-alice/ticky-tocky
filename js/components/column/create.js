@@ -1,5 +1,6 @@
 import { openModal, closeModal } from '../modal/modalOpenClose.js';
 import { inputValidation } from '../input/inputValidator.js';
+import { createColumnElement } from '../../utils/createColumnElement.js';
 
 const columnCreateButton = document.querySelector('.task-column-empty');
 
@@ -15,8 +16,22 @@ function closeColumnCreateModal() {
   closeModal(columnCreateModal);
 }
 
+function handleSubmit(e) {
+  e.preventDefault();
+  if (!inputElement.value.trim()) return;
+
+  const columnList = document.querySelector('.task-column-list');
+  const liElement = document.createElement('li');
+  liElement.className = 'task-column-item';
+  liElement.append(createColumnElement(inputElement.value.trim()));
+  columnList.insertBefore(liElement, columnList.lastElementChild);
+
+  closeModal(columnCreateModal);
+}
+
 columnCreateButton.addEventListener('click', () => openModal(columnCreateModal));
 columnCreateModalCloseButton.addEventListener('click', closeColumnCreateModal);
 columnCreateModal.addEventListener('close', closeColumnCreateModal);
+columnCreateModalSubmitButton.addEventListener('click', handleSubmit);
 
 inputValidation(inputElement, columnCreateModalSubmitButton);
