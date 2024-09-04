@@ -14,6 +14,7 @@
   &-search {
     position: relative;
     width: 100%;
+    min-width: 30rem;
 
     img {
       @include pos-center-y;
@@ -46,7 +47,6 @@
 
   .invitation-list {
     overflow-y: auto;
-    min-width: 30rem;
     max-height: 30rem;
     padding-right: 1.2rem;
 
@@ -107,5 +107,22 @@
 
   @include responsive(M) {
     right: -5.2rem;
+  }
+}
+
+.invitations-empty {
+  @include column-flexbox;
+
+  display: none;
+
+  width: 100%;
+  height: 10rem;
+
+  background-color: $black;
+  border: 0.1rem dashed $gray50;
+  border-radius: 1.2rem;
+
+  span {
+    @include text-style(16, $gray40);
   }
 }
