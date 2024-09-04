@@ -1403,12 +1403,17 @@ input:autofill:active {
   background-color: #24252d;
   border: 0.1rem solid #272931;
   border-radius: 0.6rem;
+  transition: all ease-in-out 0.2s;
 }
 .invitations-modal-search input::placeholder {
   color: #474a5b;
 }
+.invitations-modal-search input:focus {
+  border-color: #37e8b4;
+}
 .invitations-modal .invitation-list {
   overflow-y: auto;
+  min-width: 30rem;
   max-height: 30rem;
   padding-right: 1.2rem;
   display: flex;
