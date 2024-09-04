@@ -130,10 +130,16 @@
 
                 <div class="invitations-modal-search">
                   <img src="./assets/svg/ic-search.svg" alt="Search icon" />
+                  <label class="visually-hidden" for="label-search">search invitations</label>
                   <input type="text" placeholder="Enter board name to search" />
                 </div>
 
-                <ul class="invitation-list">
+                <article class="invitations-empty">
+                  <img src="./assets/svg/ic-empty.svg" alt="Empty icon" />
+                  <span>No Invitations</span>
+                </article>
+
+                <ol class="invitation-list">
                   <li class="invitation-item">
                     <div class="invitation-details">
                       <div class="invitation-details-header">
@@ -141,7 +147,7 @@
                         <span>Board Name</span>
                       </div>
                       <div class="invitation-details-content">
-                        <span>tickytocky</span>
+                        <span>TickyTocky</span>
                         <span>Javascript Study</span>
                       </div>
                     </div>
@@ -158,8 +164,8 @@
                         <span>Board Name</span>
                       </div>
                       <div class="invitation-details-content">
-                        <span>aleyna</span>
-                        <span>JS Study</span>
+                        <span>John</span>
+                        <span>Riot Games</span>
                       </div>
                     </div>
 
@@ -175,8 +181,8 @@
                         <span>Board Name</span>
                       </div>
                       <div class="invitation-details-content">
-                        <span>aleyna</span>
-                        <span>JS Study</span>
+                        <span>James</span>
+                        <span>Google Korea</span>
                       </div>
                     </div>
 
@@ -185,7 +191,7 @@
                       <button class="btn-outline btn-36" type="button" aria-label="Deny">Deny</button>
                     </div>
                   </li>
-                </ul>
+                </ol>
               </aside>
             </div>
 
@@ -994,6 +1000,7 @@
             <h2 class="visually-hidden">Card Comment</h2>
 
             <form class="text-field" action="/" method="POST">
+              <label class="visually-hidden" for="comment">comment field</label>
               <textarea class="text-field-content" name="comment" maxlength="200"></textarea>
               <div class="text-field-footer">
                 <button class="reset-button" type="button" aria-label="Reset Comment">
