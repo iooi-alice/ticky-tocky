@@ -1,5 +1,7 @@
 const invitations = document.querySelector('.invitations');
 const [invitationsButton, invitationsModal] = invitations.children;
+const acceptButtons = invitationsModal.querySelectorAll('.button-group .btn-secondary');
+const denyButtons = invitationsModal.querySelectorAll('.button-group .btn-outline');
 
 function closeInvitationsOnClickOutside(modal, containerElement) {
   return function (event) {
@@ -20,4 +22,14 @@ function toggleInvitationsModal() {
   invitationsButton.classList.toggle('is-active');
 }
 
+function handleInvitationAction(e) {
+  e.stopPropagation();
+  const item = this.closest('.invitation-item');
+  item.remove();
+}
+
 invitationsButton.addEventListener('click', toggleInvitationsModal);
+
+[...acceptButtons, ...denyButtons].forEach((button) => {
+  button.addEventListener('click', handleInvitationAction);
+});
