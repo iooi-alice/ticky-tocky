@@ -131,7 +131,7 @@
                 <div class="invitations-modal-search">
                   <img src="./assets/svg/ic-search.svg" alt="Search icon" />
                   <label class="visually-hidden" for="label-search">search invitations</label>
-                  <input type="text" placeholder="Enter board name to search" />
+                  <input type="text" name="label-search" id="label-search" placeholder="Enter board name to search" />
                 </div>
 
                 <article class="invitations-empty">
@@ -1001,7 +1001,7 @@
 
             <form class="text-field" action="/" method="POST">
               <label class="visually-hidden" for="comment">comment field</label>
-              <textarea class="text-field-content" name="comment" maxlength="200"></textarea>
+              <textarea class="text-field-content" name="comment" id="comment" maxlength="200"></textarea>
               <div class="text-field-footer">
                 <button class="reset-button" type="button" aria-label="Reset Comment">
                   <img src="./assets/svg/ic-reset.svg" alt="Reset icon" />
